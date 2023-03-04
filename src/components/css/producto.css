@@ -1,0 +1,71 @@
+.producto {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%), rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(0.5px);
+    width: 18vw;
+    padding: 1%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    margin-right: 1%;
+    border-top: 1.5px solid rgba(255, 255, 255, 0.9);
+    border-left: 1.5px solid rgba(255, 255, 255, 0.5);
+    border-right: 1px solid rgba(255, 255, 255, 0.5);
+}
+.producto:hover {
+    opacity: 85%;
+    cursor: pointer;
+}
+.tituloArticulo {
+    font-family: var(--nerko);
+    text-transform: uppercase;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+.precioArticulo {
+    font-family: var(--nerko);
+    text-transform: uppercase;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+.imgArticulo {
+    height: 35vh;
+    /* width: 100%; */
+}
+
+.productoM {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%), rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(0.5px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    width: 70%;
+    margin-bottom: 5%;
+}
+.imgArticuloM {
+    height: 75vmin;
+    
+}
+.tituloArticuloM{
+    font-family: var(--nerko);
+    text-transform: uppercase;
+    color: white;
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+.precioArticuloM {
+    font-family: var(--nerko);
+    text-transform: uppercase;
+    color: white;
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+.productoM:hover {
+    opacity: 85%;
+    cursor: pointer;
+}

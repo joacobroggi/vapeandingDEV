@@ -1,0 +1,406 @@
+.carritoDesk {
+  background: url("../../img/fondoRosa.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  margin: 0 0;
+}
+.carritoContainer {
+  display: flex;
+  margin: 0 0;
+}
+.izquierdaC {
+  margin-top: 8%;
+}
+.breadCrumb {
+  display: flex;
+  
+  position: absolute;
+  height: 1%;
+  /* background-color: antiquewhite; */
+  margin-top: 2%;
+  margin-bottom: 2%;
+  margin-left: 4.9%;
+  color: white;
+  align-content: center;
+  
+  align-items: center;
+  font-family: var(--nerko);
+ 
+ 
+}
+.separadorBreadCrumb {
+  margin: 0 6%;
+  font-size: 0.9rem;
+  font-family: var(--open);
+}
+.linkBreadcrumb {
+  color: white;
+  font-size: 1.5rem;
+  font-family: var(--nerko);
+  font-weight: 400;
+  text-decoration: none;
+
+}
+.derechaC {
+  margin-right: 0;
+  margin-left: auto;
+  width: 32%;
+  height: 100%;
+  
+}
+.izquierdaC {
+  margin-left: 4.5%;
+  
+}
+.glassDerecha {
+  height: 100%;
+  margin-top: 0;
+  margin-right: 0;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(2px);
+  
+  /* border-radius: 20px; */
+}
+.opcionesEnvio {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(2px);
+  border-radius: 20px;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+  padding: 5%;
+  
+}
+.opcionesEntregaTitulo {
+  color: white;
+  font-family: var(--chango);
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  margin-bottom: 6%;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  font-weight: 400;
+
+  font-style: normal;
+}
+.opcion {
+  margin-bottom: 5%;
+ 
+  padding: 2%;
+  border-radius: 20px;
+  transition: 0.2s;
+  outline: 4px dashed transparent;
+}
+.opcion1 {
+  
+  margin-bottom: 5%;
+  padding: 2%;
+  border-radius: 20px;
+  transition: 0.2s;
+  outline: 4px dashed white;
+}
+.opcion:hover {
+  outline: 4px dashed white;
+  cursor: pointer;
+}
+.opcionElecta {
+  outline: 4px dashed white;
+}
+
+.h5Opcion {
+  color: white;
+  font-size: 1.4rem;
+  font-family: var(--nerko);
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+  text-transform: uppercase;
+  font-weight: 400;
+
+  font-style: normal;
+}
+.pOpcion {
+  font-family: var(--nerko);
+  color: white;
+  font-size: 1rem;
+  font-weight: 400;
+
+  font-style: normal;
+}
+.glassDerecha2 {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(0px);
+  margin-bottom: 0;
+  margin-top: 5%;
+  border-radius: 20px;
+  padding: 5%;
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid rgba(255, 255, 255, 0.9);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    border-right: 0px solid rgba(255, 255, 255, 0.5);
+}
+.sub {
+  display: flex;
+  color: white;
+  font-family: var(--nerko);
+  text-transform: uppercase;
+  justify-content: space-between;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+.envioValor {
+  display: flex;
+  color: white;
+  font-family: var(--nerko);
+  margin-top: 1%;
+  justify-content: space-between;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+.tot {
+  display: flex;
+  color: white;
+  font-family: var(--nerko);
+  text-transform: uppercase;
+  justify-content: space-between;
+  font-size: 1.6rem;
+  margin-top: 2%;
+  font-weight: 400;
+}
+.finishPurchase {
+  font-family: var(--nerko);
+  color: white;
+  font-size: 2rem;
+  text-transform: uppercase;
+  align-self: center;
+  margin-top: 4%;
+  font-weight: 400;
+  text-decoration: none;
+}
+.finishPurchase2 {
+  font-family: var(--nerko);
+  color: white;
+  font-size: 2rem;
+  text-transform: uppercase;
+  align-self: center;
+  margin-top: 4%;
+  font-weight: 400;
+  opacity: 70%;
+  text-align: center;
+  text-decoration: none;
+}
+.finishPurchase2:hover {
+  cursor: not-allowed;
+}
+.reciboH4 {
+  font-weight: 400;
+}
+.h6Recibo {
+  font-weight: 400;
+}
+.reciboH5 {
+  font-weight: 400;
+}
+.carritoMobile {
+  display: none;
+}
+
+
+
+/* MOBILE CSS */
+@media (max-width: 576px) {
+  .carritoDesk {
+    display: none;
+  }
+  .carritoMobile {
+    display: block;
+    background-image: url("../../img/fondoVioleta.jpg");
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vmax;
+  }
+  .productosCarritoMobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .dropCarritoM {
+    margin-top: 20%;
+    margin-bottom: 10%;
+    width: 100%;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+  }
+
+  .opcionesEntregaMobile {
+    background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.2) 0%,
+        rgba(255, 255, 255, 0) 100%
+      ),
+      rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(2px);
+    border-radius: 20px;
+    padding: 1.5% 15%;
+    border: none;
+
+    border-top: 1.5px solid rgba(255, 255, 255, 0.9);
+    border-left: 1.5px solid rgba(255, 255, 255, 0.5);
+    border-right: 1.5px solid rgba(255, 255, 255, 0.5);
+    font-family: var(--nerko);
+    color: white;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+  }
+  .itemCartM {
+    width: 95%;
+    background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.2) 0%,
+        rgba(255, 255, 255, 0) 100%
+      ),
+      rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(2px);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1.5px solid rgba(255, 255, 255, 0.9);
+    border-left: 1.5px solid rgba(255, 255, 255, 0.5);
+    border-right: 1.5px solid rgba(255, 255, 255, 0.5);
+    margin-bottom: 5%;
+  }
+  .imgItemCartM {
+    width: 45%;
+  }
+  .titleItemCartM {
+    font-family: var(--chango);
+    color: white;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 1.1rem;
+    width: 100%;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 4%;
+  }
+  .saborItemCart {
+    font-family: var(--nerko);
+    color: white;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 1.1rem;
+    margin-bottom: 2%;
+  }
+  .precioItemCart {
+    font-family: var(--nerko);
+    color: white;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 1.5rem;
+  }
+  .removeBtnMobileCart {
+    font-family: var(--open);
+    color: white;
+    text-transform: uppercase;
+    font-weight: 700;
+    align-self: self-start;
+    margin-right: 3%;
+    margin-top: 2%;
+
+    text-align: end;
+    font-size: 1.3rem;
+  }
+  .checkoutCarritoMobile {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 25%;
+    background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.2) 0%,
+        rgba(255, 255, 255, 0) 100%
+      ),
+      rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(2px);
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border-top: 1.5px solid rgba(255, 255, 255, 0.9);
+    border-left: 1.5px solid rgba(255, 255, 255, 0.5);
+    border-right: 1.5px solid rgba(255, 255, 255, 0.5);
+  
+  }
+
+  .txt-recibo-mobile {
+    padding: 4%;
+  }
+
+  .subCMobileCont {
+    display: flex;
+    justify-content: space-between;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+  .subCMobile {
+    color: white;
+    font-family: var(--nerko);
+    color: white;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 1.7rem;
+    margin-bottom: 1%;
+  }
+  .envioCMobileCont {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1%;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+  .envioCMobile {
+    color: white;
+    font-family: var(--nerko);
+    color: white;
+    font-weight: 400;
+    font-size: 1.4rem;
+  }
+  .totalCMobileCont {
+    display: flex;
+    justify-content: space-between;
+    /* margin-bottom: 2%; */
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+  .totalCMobile {
+    color: white;
+    font-family: var(--nerko);
+    color: white;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 1.7rem;
+  }
+  .terminarCompraMobileDiv {
+   text-align: center;
+   height: 40%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+    width: 100%;
+  }
+  .terminarCompraMobile {
+    color: white;
+    font-family: var(--nerko);
+    color: white;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 1.8rem;
+    
+    text-decoration: none;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+  
+    @media screen and ( max-height: 701px ) { 
+        .terminarCompraMobile {
+            margin-bottom: 15%;
+        }
+    }
+}

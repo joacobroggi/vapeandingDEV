@@ -1,0 +1,121 @@
+.footer {
+    height: 35vh;
+    background-color: #27242B;
+    background-position: center;
+    background-size: cover;
+    backdrop-filter: blur(1px);
+}
+.footerContainer1 {
+    display: grid;
+  grid-template-columns: repeat(3, 33.3vw);
+  padding-top: 4%;
+  padding-bottom: 4%;
+  border-bottom: 1px solid white;
+}
+.marcaFooter {
+    justify-self: start;
+    color: white;
+    font-family: var(--chango);
+    margin-left: 5%;
+    font-size: 1.5rem;
+    align-self: center;
+    text-shadow: 0 0 2.5px #000, 0 0 2.5px #000;
+    font-weight: 400;
+}
+
+.opcionesFooter {
+    display: flex;
+    align-self: center;
+    margin: 0 auto;
+    justify-content: center;
+}
+.opcionFooter {
+    padding-right: 8%;
+    color: white;
+    font-family: var(--nerko);
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+.redesFooter {
+    font-size: 1.8rem;
+    color: white;
+    margin-right: 20%;
+    justify-self: end;
+    align-content: center;
+    display: flex;
+}
+.iconFooter {
+    padding-left: 20%;
+}
+
+
+.footerContainer2 {
+    display: flex;
+    align-content: center;
+    padding-top: 2.5%;
+}
+.locationFooter {
+   color: white;
+   font-family: var(--nerko);
+   font-weight: 400;
+   font-size: 1rem;
+    margin-left: 2%;
+    margin-right: auto;
+}
+.infoFooter {
+    display: flex;
+    margin-left: 0;
+    margin-right: auto;
+    width: 40%;
+}
+.opcion2Footer {
+    color: white;
+   font-family: var(--nerko);
+   font-size: 1.2rem;
+   font-weight: 400;
+   padding-right: 8%;
+}
+
+
+/* MOBILE */
+
+.footerM {
+    background-color: #27242B;
+    height: 25vmin;
+    padding: 4%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.firstRowFooterM {
+    display: flex;
+    justify-content: space-between;
+}
+.marcaFooterM {
+    font-family: var(--chango);
+    color: white;
+    font-size: 400;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+}
+.redesFooterM {
+    color: white;
+    font-size: 1.2rem;
+    display: flex;
+    margin-right: 8%;
+}
+.iconFooterM {
+    margin-right: 10%;
+}
+.opcionesFooterM {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+   
+}
+.opcionFooterM {
+    color: white;
+    font-family: var(--nerko);
+    font-weight: 400;
+    font-size: 1.15rem;
+}

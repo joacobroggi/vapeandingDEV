@@ -1,0 +1,15 @@
+.linkBtn {
+    font-family: var(--nerko);
+    color: white;
+    font-size: 2.3rem;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(0.5px);
+    text-decoration: none;
+    border-radius: 15px;
+    padding: 5%;
+    align-self: center;
+    justify-self: center;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    border-top: 2px solid rgba(255, 255, 255, 0.7);
+
+}

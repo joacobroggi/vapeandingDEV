@@ -1,0 +1,65 @@
+.itemC {
+
+    width: 55vw;
+    height: 30vh;
+    margin-bottom: 2.5%;
+    display: flex;
+}
+.removeButton {
+    margin-left: auto;
+    margin-right: 0;
+    background-color: transparent;
+    border: 0px;
+    font-size: 2rem;
+    color: #fff;
+    font-family: var(--nerko);
+}
+.itemContainerC {
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(2px);
+    width: 92%;
+    display: flex;
+    border-radius: 20px;
+    padding: 2%;
+    align-items: center;
+    border-top: 1.4px solid rgba(255, 255, 255, 0.7);
+    border-left: 1.8px solid rgba(255, 255, 255, 0.5);
+    border-right: 1px solid rgba(255, 255, 255, 0.5);
+
+}
+.imgC {
+    width: 23%;
+    height: 100%;
+    margin-right: 0;
+}
+.itemTitleC {
+    font-family: var(--chango);
+    color: #fff;
+    font-size: 1.3rem;
+  margin-right: 10%;
+  width: 30%;
+  margin-left: 0;
+  font-weight: 400;
+   text-transform: uppercase;
+   /* background-color: aqua; */
+}
+.saborC {
+    font-family: var(--nerko);
+    color: #fff;
+    font-size: 1.7rem;
+    margin-right: 18%;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin-left: 0;
+    /* background-color: aqua; */
+}
+.cantidadC {
+    width: 1%;
+}
+.precioC {
+    font-family: var(--nerko);
+    color: #fff;
+    font-size: 1.7rem;
+    text-transform: uppercase;
+    font-weight: 400;
+}

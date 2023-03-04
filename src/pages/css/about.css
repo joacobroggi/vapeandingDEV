@@ -1,0 +1,32 @@
+.about {
+    background-color: black;
+}
+.about1 {
+  text-align: center;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 4%;
+}
+.aboutIcon {
+    font-size: 5rem;
+    color: white;
+    font-weight: 400;
+}
+.aboutH2 {
+    font-size: 4rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-family: var(--nerko);
+    color: white;
+    
+}
+.pAbout {
+   font-size: 1.8rem;
+   width: 50%;
+   font-weight: 400;
+    font-family: var(--nerko);
+    color: white;
+}

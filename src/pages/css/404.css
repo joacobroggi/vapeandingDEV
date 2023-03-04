@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Chango&family=Nerko+One&family=Open+Sans:wght@300;400;500;600&display=swap');
+
+:root {
+    --chango: 'Chango', cursive;
+    --nerko: 'Nerko One', cursive;
+    --open: 'Open Sans', sans-serif;
+}
+
+
+.b404 {
+    background-image: url('../../img/404.jpg');
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+ 
+
+}
+
+.div404 {
+    display: flex;
+    margin: 5%;
+    
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+}
+.h404 {
+    color: white;
+    font-size: 8rem;
+    font-family: var(--nerko);
+}
+.p404 {
+    font-size: 2rem;
+    color: white;
+    font-family: var(--nerko);
+}
+.a404 {
+    color: white;
+    margin-top: 2%;
+    font-size: 1.5rem;
+    font-family: var(--nerko);
+}

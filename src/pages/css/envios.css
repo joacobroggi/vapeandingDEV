@@ -1,0 +1,385 @@
+.enviosMain {
+  min-height: 100vh;
+  background-image: url("../../img/fondoRosa.jpg");
+  margin: 0 0;
+  background-position: center;
+  background-size: cover;
+}
+
+.enviosCont {
+  height: 100%;
+  display: flex;
+}
+
+.izquierdaEnvios {
+  width: 55%;
+  padding-left: 5%;
+  padding-top: 8%;
+}
+
+.formEnvios {
+  width: 85%;
+}
+
+.labelEnvios {
+  width: 100%;
+}
+.nombreEnvios {
+  width: 100%;
+}
+.contenedorFormFirst {
+  display: flex;
+  margin-bottom: 2%;
+}
+.contenedorForm {
+  width: 100%;
+  margin-bottom: 2%;
+}
+.contenedorForm2 {
+  width: 100%;
+}
+.nombreEnvios {
+  width: 85%;
+  font-family: var(--nerko);
+  font-size: 1.2rem;
+  font-weight: 400;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 3% 3%;
+
+  color: white;
+  border: 0px;
+  border-top: 1.5px solid rgba(255, 255, 255, 0.9);
+  border-left: 1.5px solid rgba(255, 255, 255, 0.5);
+  border-right: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+}
+input:hover {
+  outline: none;
+  background: rgba(255, 255, 255, 0.45);
+}
+input:focus {
+  outline: none;
+  background: rgba(255, 255, 255, 0.45);
+}
+input:focus-within {
+  outline: none;
+}
+
+.inputEnvios {
+  width: 90%;
+  font-family: var(--nerko);
+  font-size: 1.2rem;
+  font-weight: 400;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 2% 3%;
+
+  color: white;
+  border: 0px;
+  border-top: 1.5px solid rgba(255, 255, 255, 0.9);
+  border-left: 1.5px solid rgba(255, 255, 255, 0.5);
+  border-right: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+}
+input::placeholder {
+  color: white;
+}
+.labelEnvios {
+  font-family: var(--nerko);
+  font-size: 1.4rem;
+  font-weight: 400;
+
+  color: white;
+}
+
+.titleEnvios {
+  font-size: 2.5rem;
+  color: white;
+  font-family: var(--nerko);
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-bottom: 2%;
+}
+.checkboxEnvios {
+  margin-bottom: 5%;
+  margin-top: 2%;
+}
+
+.botoneraEnvios {
+  display: flex;
+  justify-content: space-between;
+  width: 82%;
+  margin-top: 1.5%;
+  margin-bottom: 5%;
+  align-items: center;
+}
+.volverEnvios {
+  color: white;
+  font-family: var(--nerko);
+  font-size: 1.6rem;
+  text-decoration: none;
+}
+.chevronEnvios {
+  font-size: 1rem;
+}
+.continuarEnvios {
+  font-family: var(--nerko);
+  font-size: 1.5rem;
+  font-weight: 400;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 1% 10%;
+
+  color: white;
+  border: 0px;
+  border-top: 1.5px solid rgba(255, 255, 255, 0.9);
+  border-left: 1.5px solid rgba(255, 255, 255, 0.5);
+  border-right: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  text-decoration: none;
+}
+.productoEnvios {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1% 5%;
+  height: 15vh;
+  width: 35vw;
+  margin-bottom: 2%;
+  margin-top: 2%;
+
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  border: 0px;
+  border-top: 1.5px solid rgba(255, 255, 255, 0.9);
+  border-left: 1.5px solid rgba(255, 255, 255, 0.5);
+  border-right: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+}
+.productoEnvios img {
+  height: 100%;
+}
+.h3EnviosProducto {
+  font-family: var(--nerko);
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 1.4rem;
+  width: 90%;
+}
+.h4EnviosProducto {
+  font-family: var(--nerko);
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 1.2rem;
+}
+.precioEnviosProducto {
+  font-family: var(--nerko);
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+.derechaEnvios {
+  display: flex;
+  background: rgba(255, 255, 255, 0.15);
+  width: 40%;
+  justify-content: center;
+  align-content: center;
+  padding: 2%;
+  flex-direction: column;
+}
+.enviosBottom {
+  margin-top: auto;
+  /* margin-bottom: 5%; */
+}
+.subEnvios,
+.envioH5 {
+  display: flex;
+  justify-content: space-between;
+}
+.subH5 {
+  color: white;
+  font-family: var(--nerko);
+  font-weight: 400;
+  font-size: 1.3rem;
+}
+.subH4 {
+  color: white;
+  font-family: var(--nerko);
+  font-weight: 400;
+  font-size: 1.7rem;
+}
+.hrEnvios {
+  border: 1px solid white;
+  margin-top: 3%;
+  margin-bottom: 3%;
+}
+.envioInfoCont {
+  width: 85%;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 2%;
+  border-radius: 10px;
+  border-top: 1.5px solid rgba(255, 255, 255, 0.9);
+  border-left: 1.5px solid rgba(255, 255, 255, 0.5);
+  border-right: 1px solid rgba(255, 255, 255, 0.5);
+}
+.envioInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1%;
+  margin-top: 1%;
+}
+.linkContactoEnvio {
+  color: white;
+  font-family: var(--nerko);
+  font-weight: 400;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+.h3ContactoInfo {
+  font-family: var(--nerko);
+  color: white;
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+.hr {
+  border: 1px solid white;
+}
+
+.opcionesDePago {
+  width: 89%;
+  background: rgba(255, 255, 255, 0.15);
+
+  border-radius: 10px;
+  border-top: 1.5px solid rgba(255, 255, 255, 0.9);
+  border-left: 1.5px solid rgba(255, 255, 255, 0.5);
+  border-right: 1px solid rgba(255, 255, 255, 0.5);
+  margin-bottom: 4%;
+}
+.opcionPago {
+  display: flex;
+  align-items: center;
+}
+.opcionPagoButtonActive {
+  padding: 1%;
+  border-radius: 50%;
+  margin-right: 2%;
+  margin-left: 2%;
+  background: rgba(255, 255, 255, 0.15);
+  border: 6px solid white;
+}
+.opcionPagoButton {
+  padding: 1.7%;
+  border-radius: 50%;
+  margin-right: 2%;
+  margin-left: 2%;
+  background: rgba(255, 255, 255, 0.15);
+  border: 2px solid white;
+  transition: 0.2s;
+}
+.opcionPagoButton:hover {
+  cursor: pointer;
+  padding: 1%;
+  border-radius: 50%;
+  margin-right: 2%;
+  margin-left: 2%;
+  background: rgba(255, 255, 255, 0.15);
+  border: 6px solid white;
+}
+.h3Pagos {
+  padding: 1%;
+  color: white;
+  font-family: var(--nerko);
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+.pagoDesc {
+  background: rgba(255, 255, 255, 0.15);
+  width: 96%;
+
+  padding: 2%;
+}
+.descPago {
+  color: white;
+  font-family: var(--nerko);
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+.hide {
+  display: none;
+}
+.titleEnvios2 {
+  font-size: 2.5rem;
+  color: white;
+  font-family: var(--nerko);
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-bottom: 2%;
+  margin-top: 4%;
+}
+.botoneraEnvios2 {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin-top: 4.5%;
+  margin-bottom: 5%;
+  align-items: center;
+}
+.cartelContainer {
+    display: flex;
+    flex-direction: column;
+    height: 84vh;
+    
+    justify-content: center;
+    
+}
+.cartelOrden {
+  width: 75%;
+  background: rgba(255, 255, 255, 0.2);
+margin-bottom: 10%;
+  border-radius: 20px;
+  padding: 5% 5%;
+  margin-left: 4%;
+text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.9);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  border-right: 0px solid rgba(255, 255, 255, 0.5);
+}
+.linkBreadcrumb {
+    transition: 0.2s;
+    opacity: 85%;
+}
+.linkBreadcrumbActive {
+    /* letter-spacing: -0.5px; */
+    opacity: 100%;
+    color: white;
+    font-size: 1.5rem;
+    font-family: var(--nerko);
+    font-weight: 400;
+    text-decoration: none;
+}
+.linkBreadcrumb:hover {
+    letter-spacing: -0.5px;
+    opacity: 100%;
+}
+
+.h2Orden {
+    color: white;
+    font-family: var(--nerko);
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 2.6rem;
+    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+}
+.pOrden {
+    color: white;
+    font-weight: 400;
+    font-family: var(--nerko);
+    font-size: 1.7rem;
+}
+.hrEnvios2 {
+    border: 0.2px solid white;
+    margin-top: 1%;
+    margin-bottom: 3%;
+}

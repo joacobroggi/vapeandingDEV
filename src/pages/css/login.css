@@ -1,0 +1,131 @@
+.loginBody {
+    background-image: url('../../img/piluso.jpg');
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.loginCard {
+    background: rgba(255, 255, 255, 0.25);
+  width: 35vw;
+  
+  min-height: 70vh;
+
+  color: white;
+  border: 0px;
+  border-top: 1.5px solid rgba(255, 255, 255, 0.9);
+  border-left: 1.5px solid rgba(255, 255, 255, 0.5);
+  border-right: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.h3Login {
+    font-family: var(--nerko);
+    font-weight: 400;
+    font-size: 3rem;
+    text-transform: uppercase;
+    margin-bottom: 4%;
+}
+.loginForm {
+   display: flex;
+   flex-direction: column;
+ margin-top: 0;
+   
+}
+.labelLogin {
+    font-family: var(--nerko);
+    font-weight: 400;
+    font-size: 1.8rem;
+  text-align: left;
+
+}
+.inputIniciar {
+    width: 25vw;
+    height: 3vh;
+    padding: 3%;
+    margin-bottom: 4%;
+
+    background: rgba(255, 255, 255, 0.25);
+    font-family: var(--nerko);
+    font-size: 1.2rem;
+  
+    color: white;
+    border-radius: 10px;
+    border: 0px;
+    border-top: 1.5px solid rgba(255, 255, 255, 0.9);
+    border-left: 1.5px solid rgba(255, 255, 255, 0.5);
+    border-right: 1px solid rgba(255, 255, 255, 0.5);
+}
+.chiquitin {
+width: 42%;
+
+}
+.nombreRegistro {
+    width: 100%;
+    height: 3vh;
+    padding: 3%;
+    margin-bottom: 4%;
+
+    background: rgba(255, 255, 255, 0.25);
+    font-family: var(--nerko);
+    font-size: 1.2rem;
+  
+    color: white;
+    border-radius: 10px;
+    border: 0px;
+    border-top: 1.5px solid rgba(255, 255, 255, 0.9);
+    border-left: 1.5px solid rgba(255, 255, 255, 0.5);
+    border-right: 1px solid rgba(255, 255, 255, 0.5);
+}
+.enviarLogin {
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 10px;
+    border: 0px;
+    border-top: 1.5px solid rgba(255, 255, 255, 0.9);
+    border-left: 1.5px solid rgba(255, 255, 255, 0.5);
+    border-right: 1px solid rgba(255, 255, 255, 0.5);
+    align-self: center;
+    width: 27vw;
+    height: 5.5vh;
+   margin-top: 4%;
+    font-family: var(--nerko);
+    color: white;
+    font-size: 1.5rem;
+}
+.h6Login {
+    align-self: center;
+    font-size: 1.8rem;
+    font-family: var(--nerko);
+    font-weight: 400;
+    text-transform: uppercase;
+    margin: 4% 0;
+}
+.googleLogin {
+    align-self: center;
+
+}
+.googleLogin {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    border: 1px solid white;
+    padding: 2%;
+    color: rgba(89, 89, 89, 1);;
+    width: 70%;
+    font-size: 1rem;
+    font-family: var(--open);
+}
+.google-logo {
+    height: 5.5vh;
+    margin-right: 2%;
+}
+.chiquitinRegistro {
+    display: flex;
+    justify-content: space-between;
+}

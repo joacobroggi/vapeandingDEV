@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Chango&family=Nerko+One&family=Open+Sans:wght@300;400;500;600&display=swap');
+
+:root {
+    --chango: 'Chango', cursive;
+    --nerko: 'Nerko One', cursive;
+    --open: 'Open Sans', sans-serif;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+
+.headerDiv {
+    display: flex;
+    padding: 1.8% 0;
+    align-items: center;
+    width: 100%;
+    position: absolute;
+    
+}
+
+
+.h3Header {
+    color: white;
+    font-family: var(--chango);
+    justify-self: start;
+    margin-left: 4.5%;
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+.h4Header {
+    color: white;
+    font-family: var(--nerko);
+    font-size: 1.65rem;
+    font-weight: 400;
+}
+.comprar {
+    margin-left: 3%;
+    margin-right: 2%;
+}
+.carritoDiv {
+    margin-left: auto;
+    margin-right: 3%;
+}
+
+
+.h3Header:hover {
+    opacity: 90%;
+    cursor: pointer;
+}
+.h4Header:hover {
+    opacity: 90%;
+    cursor: pointer;
+}
+.carritoDiv:hover {
+    opacity: 90%;
+    cursor: pointer;
+}
+
+.headerDivM {
+    width: 96%;
+  
+    
+    display: flex;
+    padding: 2%;
+    justify-content: space-between;
+}
+.hamburgerM {
+    color: white;
+    font-size: 1.5rem;
+}
+.h3HeaderM {
+    color: white;
+    font-size: 1.5rem;
+}
+.hamburgerM {
+    color: white;
+    font-size: 1.5rem;
+}
+.cartM {
+    color: white;
+    font-size: 1.5rem;
+}
+
+.headerM {
+    position: fixed;
+    width: 100%;
+}
+.headerMBlured {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(2px);
+}
+
+
+
+.slide-in-left {
+	-webkit-animation: slide-in-left 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-in-left 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@-webkit-keyframes slide-in-left {
+    0% {
+      -webkit-transform: translateX(-1000px);
+              transform: translateX(-1000px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  @keyframes slide-in-left {
+    0% {
+      -webkit-transform: translateX(-1000px);
+              transform: translateX(-1000px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+      opacity: 1;
+    }
+  }

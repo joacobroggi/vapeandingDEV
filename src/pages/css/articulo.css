@@ -1,0 +1,394 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+.articuloBody {
+    background-image: url('../../img/fondoRosa.jpg');
+    background-position: center;
+    height: 90vh;
+    padding-top: 5%;
+}
+.articuloBodyhungria {
+    background-color: black;
+    background-position: center;
+    height: 90vh;
+    padding-top: 5%;
+}
+.articuloBodyparty {
+    background-image: url('../../img/fondoAzul.jpg');
+    background-position: bottom;
+    background-size: cover;
+    height: 90vh;
+    padding-top: 5%;
+}
+.articuloC {
+    display: flex;
+    align-items: center;
+    height: 85%;
+}
+.arrowArticulo {
+    color: white;
+    font-size: 2rem;
+    margin: 1%;
+}
+.arrowArticulohungria {
+    color: #E40D18;
+
+    font-size: 2rem;
+    margin: 1%;
+}
+.arrowArticuloparty {
+    
+    color:#AEEDFF ;
+
+    font-size: 2rem;
+    margin: 1%;
+}
+.imgArticuloC {
+    width: 32vw;
+    height: 70vh;
+    align-self: center;
+    justify-content: center;
+    transform: rotate(25deg);
+}
+.imgArticuloUniquehungria {
+    width: 40vw;
+    /* height: 80vh; */
+    position: absolute;
+    left: 50%;
+    top: 10%;
+}
+.imgArticuloUniqueparty {
+    width: 35vw;
+    /* height: 80vh; */
+    position: absolute;
+    left: 55%;
+    top: 10%;
+}
+.logoArticulo {
+    width: 20vw;
+    margin-bottom: 2%;
+}
+.logoArticulohungria {
+    width: 20vw;
+    margin-bottom: 2%;
+}
+.logoArticuloparty {
+    width: 15vw;
+    margin-bottom: 2%;
+}
+.izquierda {
+    width: 40vw;
+    margin-left: 4.5%;
+    color: white;
+    font-family: var(--nerko);
+    align-self: flex-start;
+}
+.h2Articulo {
+    font-family: var(--chango);
+    font-size: 2.7rem;
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+    text-transform: uppercase;
+    margin-bottom: 2%;
+}
+.h5Articulo {
+    font-size: 1.5rem;
+    margin-bottom: 4%;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-style: normal;
+}
+.h5Articulohungria {
+    font-size: 1.5rem;
+    margin-bottom: 2%;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-style: normal;
+    color: #E40D18;
+}
+.h5Articuloparty {
+    font-size: 1.5rem;
+    margin-bottom: 2%;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-style: normal;
+    -webkit-text-stroke: 1px #AEEDFF;
+    color: transparent;
+}
+.pH6 {
+    margin-bottom: 4%;
+    /* font-size: 1.4rem; */
+   
+    font-weight: 400;
+   font-family: var(--nerko);
+    font-style: normal;
+}
+.derecha {
+    align-self: flex-end;
+    margin-right: 2.5%;
+    margin-left: auto;
+    justify-self: flex-end;
+    
+}
+.h2Precio {
+    font-family: var(--nerko);
+    font-weight: 400;
+    text-transform: uppercase;
+    font-style: normal;
+    color: white;
+    text-decoration: none;
+    font-size: 1.4rem;
+}
+.h2Preciohungria {
+    font-family: var(--nerko);
+    font-weight: 400;
+    text-transform: uppercase;
+    font-style: normal;
+    color: #E40D18;
+    text-decoration: none;
+    font-size: 1.4rem;
+}
+.h2Precioparty {
+    font-family: var(--nerko);
+    font-weight: 400;
+    text-transform: uppercase;
+    font-style: normal;
+    -webkit-text-stroke: 1px #AEEDFF;
+    color: transparent;
+    text-decoration: none;
+    font-size: 1.4rem;
+}
+.valor {
+    font-family: var(--nerko);
+    font-weight: 400;
+    text-transform: uppercase;
+    font-style: normal;
+}
+
+
+
+.derecha {
+    display: flex;
+    align-items: flex-end;
+    justify-content: baseline;
+   
+    font-family: var(--nerko);
+    font-size: 0.9rem;
+    text-align: end;
+    flex-direction: column;
+    
+}
+.pH6 {
+    font-size: 1.2rem;
+}
+
+.h6Articulo {
+    font-size: 1.5rem;
+    /* text-align: center;  */
+    font-weight: 400;
+    text-transform: uppercase;
+    font-style: normal;
+}
+.h6Articulohungria {
+    font-size: 1.5rem;
+    /* text-align: center;  */
+    font-weight: 400;
+    text-transform: uppercase;
+    font-style: normal;
+    color: #E40D18;
+}
+.h6Articuloparty {
+    font-size: 1.5rem;
+    /* text-align: center;  */
+    font-weight: 400;
+    text-transform: uppercase;
+    font-style: normal;
+    -webkit-text-stroke: 1px #AEEDFF;
+    color: transparent;
+}
+.detallesArticulo {
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.1rem;
+}
+.detalleArt {
+    font-weight: 400;
+    text-transform: uppercase;
+    font-style: normal;
+}
+.info-Articulo {
+    display: flex;
+    width: 50%;
+    margin-top: 4%;
+    justify-content: space-between;
+}
+.info-Articulo div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.detalleH6 {
+    font-family: var(--nerko);
+    font-weight: 400;
+    text-transform: uppercase;
+    font-style: normal;
+    font-size: 1.1rem;
+    
+}
+.info-Articulo span {
+    font-size: 1.4rem;
+}
+.articuloMobile {
+    display: none;
+}
+.info-Articulohungria {
+    display: flex;
+    width: 50%;
+    margin-top: 4%;
+    justify-content: space-between;
+}
+.info-Articuloparty {
+    display: flex;
+    width: 50%;
+    margin-top: 4%;
+    justify-content: space-between;
+}
+.info-Articulohungria div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.info-Articulohungria span {
+    font-size: 1.4rem;
+    color: transparent;
+    -webkit-text-stroke: 1px #E40D18;
+    
+}
+.info-Articulohungria .tipoCont .iconSabor{
+    color: #E40D18;
+    
+}
+.info-Articulohungria h6 {
+    font-family: var(--open);
+    font-weight: 800;
+    color: transparent;
+    -webkit-text-stroke: 1px #E40D18;
+
+}
+
+.info-Articuloparty div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.info-Articuloparty span {
+    font-size: 1.4rem;
+    color: transparent;
+    -webkit-text-stroke: 1px #AEEDFF;
+    
+}
+.info-Articuloparty .tipoCont .iconSabor{
+    color: #AEEDFF;
+    
+}
+.info-Articuloparty h6 {
+    font-family: var(--open);
+    font-weight: 800;
+    color: transparent;
+    -webkit-text-stroke: 1px #AEEDFF;
+
+}
+@media (max-width: 576px) { 
+    .articuloDesk {
+        display: none;
+    }
+    .articuloMobile {
+        display: block;
+        background-image: url('../../img/fondoVioleta.jpg');
+        background-position: center;
+        height: 100%;
+        
+    }
+    .imgArticuloM2 {
+        width: 100%;
+        padding-top: 10%;
+    }
+    .articuloBottomM {
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%), rgba(255, 255, 255, 0.3);
+        border-top-left-radius: 35px;
+        border-top-right-radius: 35px;
+        border-top: 2px solid white;
+        padding: 5%;
+        display: flex;
+        flex-direction: column;
+    }
+    .articuloMTitle {
+        font-family: var(--chango);
+        text-transform: uppercase;
+        color: white;
+        font-weight: 400;
+        text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+        font-size: 1.4rem;
+        margin-bottom: 2%;
+    }
+    .fullTitleArticulo {
+        font-family: var(--nerko);
+        color: white;
+        text-transform: uppercase;
+        font-weight: 400;
+        font-size: 1rem;
+        margin-bottom: 2.5%;
+    }
+    .descArticuloM {
+        font-family: var(--nerko);
+        color: white;
+        font-weight: 400;
+        font-size: 1.3rem;
+        margin-bottom: 6%;
+    }
+    .detallesM {
+        display: flex;
+        justify-content: space-between;
+        /* margin-bottom: 2%; */
+    }
+    .detallesH5M {
+        font-family: var(--nerko);
+        color: white;
+        font-weight: 400;
+        text-transform: uppercase;
+        font-size: 1.3rem;
+    }
+    .detalleH6 {
+        font-family: var(--nerko);
+        color: white;
+        font-weight: 400;
+        font-size: 1.1rem;
+    }
+    .detalleM {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .detalleM span {
+        font-family: var(--nerko);
+        color: white;
+        font-weight: 400;
+        font-size: 1.5rem;
+    }
+    .btnArticuloM {
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%), rgba(255, 255, 255, 0.3);
+        
+        border: 1px solid transparent;
+        border-top: 1.5px solid white;
+        border-radius: 20px;
+        padding: 2% 4%;
+        font-family: var(--nerko);
+        color: white;
+        font-weight: 400;
+        font-size: 1.3rem;
+        text-transform: uppercase;
+        margin-top: 8%;
+        
+    }
+ }

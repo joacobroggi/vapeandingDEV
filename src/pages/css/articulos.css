@@ -1,0 +1,137 @@
+.articulosMobile {
+    display: none;
+}
+
+.articulosDesk {
+    background: url('../../img/fondoVioleta.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    margin: 0 0;
+}
+.cartelArticulos {
+    height: 20vh;
+    padding-top: 8%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.h2Articulos {
+    color: white;
+    font-size: 3rem;
+    width: 50%;
+    text-align: center;
+    font-family: var(--nerko);
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+    text-transform: uppercase;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-style: normal;
+}
+
+.containerFiltros {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%), rgba(255, 255, 255, 0.3);
+    /* backdrop-filter: blur(2px); */
+    display: flex;
+    width: 85%;
+    align-content: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 1.5%;
+    margin-top: 2%;
+    margin-bottom: 4%;
+    border-radius: 20px;
+    color: white;
+}
+.filtro1 {
+    margin-left: 2.5%;
+}
+.filtro {
+    margin-left: 6%;
+}
+.filtroP {
+    color: white;
+    text-decoration: none;
+    font-family: var(--nerko);
+    font-size: 1.7rem;
+}
+.logoMarca {
+    height: 25vh;
+    margin-bottom: 2%;
+    margin-top: 2%;
+}
+.tituloFiltro {
+    font-family: var(--nerko);
+    font-size: 2rem;
+}
+ul {
+    list-style: none;
+}
+.productos {
+    margin-top: 4%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-around;
+    row-gap: 20px;
+}
+
+
+@media (max-width: 576px) { 
+    .articulosDesk {
+        display: none;
+    }
+    .articulosMobile {
+        display: block;
+        background: url('../../img/fondoVioleta.jpg');
+        background-size: cover;
+        background-position: center;
+        height: 100%;
+        margin: 0 0;
+       
+    }
+    .productosM {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    .artTitleM {
+        padding-top: 20%;
+        text-align: center;
+        color: white;
+        font-family: var(--nerko);
+        font-size: 2rem;
+        font-weight: 400;
+        width: 95%;
+        margin: 0 auto;
+        padding-bottom: 4%;
+    }
+    .filtrosM {
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%), rgba(255, 255, 255, 0.3);
+        display: flex;
+        flex-wrap: wrap;
+        width: 85%;
+        margin: 0 auto;
+        padding: 4%;
+        border-radius: 15px;
+        justify-content: space-between;
+        margin-bottom: 5%;
+    }
+    .h3FiltrosM {
+        color: white;
+        font-family: var(--nerko);
+        font-weight: 400;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+    }
+    .filtroM {
+        color: white;
+        font-family: var(--nerko);
+        font-weight: 400;
+        font-size: 1.2rem;
+        text-transform: capitalize;
+    }
+
+ }
