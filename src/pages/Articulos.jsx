@@ -1,4 +1,4 @@
-import Producto from "../components/Producto";
+ import Producto from "../components/Producto";
 import { useState, useEffect } from 'react';
 import { publicRequest } from "../requestMethods";
 import Header from '../components/Header';
@@ -50,19 +50,19 @@ const Articulos = ()=> {
                 <ul className="filtro">
                     <p className="tituloFiltro">PUFFS</p>
                     <li>
-                        <Link to='/filtros/puffs/1500' className='filtroP'>1500</Link>
+                        <Link to='/filtros/puffs/1800' className='filtroP'>1800</Link>
                     </li>
                     <li>
-                    <Link to='/filtros/puffs/1800' className='filtroP'>1800</Link>                    
+                    <Link to='/filtros/puffs/2000' className='filtroP'>2000</Link>                    
                     </li>
                     <li>
-                        <p className='filtroP'>1800</p>                        
+                    <Link to='/filtros/puffs/5000' className='filtroP'>5000</Link>                        
                     </li>
                 </ul>
                 <ul className="filtro">
                     <p className="tituloFiltro">SABORES</p>
                     <li>
-                        <p className='filtroP'>Frutal</p>
+                    <Link to='/filtros/tipoSabor/frutal' className='filtroP'>Frutal</Link> 
                     </li>
                     <li>
                         <p className='filtroP'>Tabaco</p>                        

@@ -8,7 +8,7 @@ const FooterM = ()=> {
     return (
         <div className='footerM'>
             <div className="firstRowFooterM">
-            <span className='marcaFooterM'><FontAwesomeIcon icon={faCloud}></FontAwesomeIcon> Vapeanding</span>
+            <span className='marcaFooterM'><FontAwesomeIcon icon={faCloud}></FontAwesomeIcon> Vapearg</span>
             <div className='redesFooterM'>
                 <FontAwesomeIcon icon={faInstagram} className='iconFooterM'></FontAwesomeIcon>
                 <FontAwesomeIcon icon={faTelegram} className='iconFooterM'></FontAwesomeIcon>

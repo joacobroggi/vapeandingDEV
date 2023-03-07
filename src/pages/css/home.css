@@ -52,7 +52,7 @@
 .containerOfertas {
     display: flex;
     flex-direction: column;
-    align-items: start;
+    align-items: flex-start;
     justify-items: center;
     justify-content: center;
     height: 100%;
@@ -61,7 +61,7 @@
 .ofertaHome {
     display: flex;
     flex-direction: column;
-    align-items: start;
+    align-items: flex-start;
     width: 70%;
     text-align: left;
 }
@@ -305,9 +305,9 @@ h1 {
         display: block;
     }
     .home1M {
-        background-image: url('../../img/piluso.jpg');
+        background-image: url('../../img/fondoHumo.gif');
         background-size: cover;
-        height: 70vmax;
+        height: 60vmax;
         background-position: center;
         
     }

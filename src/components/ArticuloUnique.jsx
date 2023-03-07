@@ -108,9 +108,7 @@ const ArticuloUnique = (props) => {
       />
 
       <div className="derecha">
-        <Link to="/carrito" className={"h2Precio" + props.tema} onClick={handleClick}>
-          AGREGAR AL CARRITO - <b className="valor">${props.precio}</b>
-        </Link>
+      {props.hasOrdered ?  <Link to='/pedidos' className="h2Precio" style={{fontWeight: 400}}>YA REALIZASTE UNA ORDEN</Link> :  <Link to='/carrito' className="h2Precio" onClick={handleClick}>AGREGAR AL CARRITO - <b className="valor">${props.precio}</b></Link>}
       </div>
     </div>
   );

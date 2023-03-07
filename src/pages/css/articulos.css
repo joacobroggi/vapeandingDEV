@@ -1,11 +1,20 @@
 .articulosMobile {
     display: none;
 }
+.cartelFiltro {
+    display: flex;
+    padding-top: 8%;
+    
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+}
 
 .articulosDesk {
-    background: url('../../img/fondoVioleta.jpg');
+    background: url('../../img/fondoAzul.jpg');
     background-size: cover;
     background-position: center;
+    min-height: 100vh;
     height: 100%;
     margin: 0 0;
 }
@@ -42,6 +51,9 @@
     margin-bottom: 4%;
     border-radius: 20px;
     color: white;
+    border-top: 1.5px solid rgba(255, 255, 255, 0.9);
+    border-left: 1.5px solid rgba(255, 255, 255, 0.5);
+    border-right: 1px solid rgba(255, 255, 255, 0.5);
 }
 .filtro1 {
     margin-left: 2.5%;
@@ -83,7 +95,7 @@ ul {
     }
     .articulosMobile {
         display: block;
-        background: url('../../img/fondoVioleta.jpg');
+        background: url('../../img/fondoAzul.jpg');
         background-size: cover;
         background-position: center;
         height: 100%;

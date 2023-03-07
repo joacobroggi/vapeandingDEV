@@ -55,12 +55,15 @@ const Pago = () => {
           pago: pago,
           telefono: orden.telefono,
           nombre: usuario.nombre + ' ' + usuario.apellido,
-          hasOrdered: 'ordered'
+          hasOrdered: true
         }
         console.log(objeto);
         axios.post('http://localhost:7000/api/compras/', objeto)
             .then((res)=>{
                 console.log(res);
+                dispatch(
+                  addOrden(objeto)
+                )
                 setFinalizado(true);
             })
 
@@ -77,7 +80,7 @@ const Pago = () => {
           pago: pago,
           telefono: orden.telefono,
           nombre: usuario.nombre + ' ' + usuario.apellido,
-          hasOrdered: 'ordered'
+          hasOrdered: true
         }
 
 
@@ -88,6 +91,9 @@ const Pago = () => {
         })
             .then((res)=>{
                 console.log(res);
+                dispatch(
+                  addOrden(objeto)
+                )
                 setFinalizado(true);
             })
 
@@ -102,7 +108,7 @@ const Pago = () => {
           pago: pago,
           telefono: orden.telefono,
           nombre: usuario.nombre + ' ' + usuario.apellido,
-          hasOrdered: 'ordered'
+          hasOrdered: true
         }
 
 
@@ -113,7 +119,11 @@ const Pago = () => {
         })
             .then((res)=>{
                 console.log(res);
+                dispatch(
+                  addOrden(objeto)
+                )
                 setFinalizado(true);
+                
             })
 
       } else {

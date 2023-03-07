@@ -2,7 +2,7 @@ import { useSelector } from "react-redux";
 import {addEnvio} from '../redux/cartRedux'
 import { useDispatch } from 'react-redux';
 import "./css/carrito.css";
-
+import Header from "../components/Header";
 import HeaderM from "../components/HeaderM";
 
 import CarritoItem from "../components/CarritoItem";
@@ -129,21 +129,8 @@ const Carrito = () => {
     <div className="carritoDivv">
       <div className="carritoDesk">
         <div className="carritoContainer">
-        <div className="breadCrumb">
-              <Link to="/" className="linkBreadcrumb">
-                Home
-              </Link>
-              <span className="separadorBreadCrumb">
-                <FontAwesomeIcon icon={faChevronLeft}></FontAwesomeIcon>
-              </span>
-              <Link to="/comprar" className="linkBreadcrumb">
-                Comprar
-              </Link>
-              <span className="separadorBreadCrumb">
-                <FontAwesomeIcon icon={faChevronLeft}></FontAwesomeIcon>
-              </span>
-              <Link className="linkBreadcrumbActive">Carrito</Link>
-            </div>
+       
+            <Header></Header>
           <div className="izquierdaC">
            
             {carrito.productos.map((producto) => (
@@ -153,6 +140,7 @@ const Carrito = () => {
                 precio={producto.precio}
                 claveUnica={producto.claveUnica}
                 key={producto.claveUnica}
+                sabor={producto.sabor}
               ></CarritoItem>
             ))}
           </div>

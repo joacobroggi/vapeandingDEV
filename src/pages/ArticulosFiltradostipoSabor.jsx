@@ -1,6 +1,4 @@
 import { useParams, Link } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import { useState, useEffect } from "react";
 import { publicRequest } from "../requestMethods";
 import Producto from "../components/Producto";
@@ -9,18 +7,20 @@ import HeaderM from "../components/HeaderM";
 import MobileProducto from "../components/MobileProducto";
 import './css/articulos.css';
 import Footer from "../components/Footer";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 
 
 
 
-const ArticulosFiltradosMarca = ()=> {
+const ArticulosFiltradosPuffs = ()=> {
     let parametro = useParams();
-    let marca = parametro.marca;
+    let sabor = parametro.tipoSabor;
     
     const [data, setData] = useState(null)
 
     useEffect(()=> {
-        publicRequest.get("productos/marca/"+ marca).then((res)=>{
+        publicRequest.get("productos/tipoSabor/"+ sabor).then((res)=>{
             setData(res.data)
             
         })
@@ -30,12 +30,10 @@ const ArticulosFiltradosMarca = ()=> {
     return (
         <div className="articulosMain">
         <div className="articulosDesk">
-        <Header carrito={true}></Header>
-        
-       
-        <div className="cartelFiltro">
+       <Header carrito={true}></Header>
+       <div className="cartelFiltro">
         <Link to='/comprar' style={{alignSelf: 'flex-start', marginLeft:'2%'}}><FontAwesomeIcon icon={faArrowLeft} className='arrowArticulo' ></FontAwesomeIcon></Link>
-            <h2 className="h2Articulos">Productos {marca}</h2>
+            <h2 className="h2Articulos">Vapes con sabor de tipo {sabor}</h2>
            
         </div>
        
@@ -45,9 +43,7 @@ const ArticulosFiltradosMarca = ()=> {
     {data && data.map(item=> <Producto titulo={item.titulo} precio={item.precio} img={item.img2} categorias={item.categorias} stock={item.enStock} desc={item.desc} key={item._id} id={item._id}/>)}
     </div>
 
-    <br />
-    <br />
-    <Footer></Footer>
+    
     </div>
 
     <div className="articulosMobile">
@@ -95,4 +91,4 @@ const ArticulosFiltradosMarca = ()=> {
     )
 }
 
-export default ArticulosFiltradosMarca;
+export default ArticulosFiltradosPuffs;

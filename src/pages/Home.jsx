@@ -20,9 +20,9 @@ const Home = () => {
             Estamos revolucionando el vaping rosarino
           </h2>
           <p className="home3p">
-          Vapeanding es la mejor opción, con envios en solo MINUTOS, precios accesibles y solo productos originales.
+          Nuestra página es la mejor opción para conseguir tu vaper, con envios en solo MINUTOS, precios accesibles y solo productos originales.
           </p>
-          <Link className='home3LinkBtn'>Conocé vapeanding</Link>
+          <Link to='/about' className='home3LinkBtn'>Conocé vapearg</Link>
         </div>
         <Footer></Footer>
       </div>

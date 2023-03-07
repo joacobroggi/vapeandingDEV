@@ -6,7 +6,7 @@ const Home1 = ()=> {
         <div className='homeBody'>
            <Header carrito={true}></Header>
             <div className="baner1">
-                <h1><span className="nerko">Bienvenido a</span> <span className="chango">Vapeanding</span></h1>
+                <h1><span className="nerko">Bienvenido a</span> <span className="chango">Vapearg</span></h1>
                 <p className="banner1P">
                 El único eccomerce de vapers rosarino con envío inmediato.
                 <br />

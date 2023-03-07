@@ -14,7 +14,7 @@ const Header = (props) => {
           
             <h4 className='h4Header comprar'><Link to='/comprar' style={{textDecoration: 'none', color: 'white'}}>COMPRAR</Link></h4>
             <h4 className='h4Header sobreEscabianding'><Link to='/about' style={{textDecoration: 'none', color: 'white'}}>SOBRE VAPEANDING</Link></h4>
-          
+            {props.noPedidos? '' : <h4 className='h4Header sobreEscabianding'><Link to='/pedidos' style={{textDecoration: 'none', color: 'white'}}>PEDIDOS</Link></h4>}
             {props.carrito && <div className="carritoDiv">
             <Link to="/carrito">
             <FontAwesomeIcon icon={faCartShopping} style={{color: 'white', fontSize:'1.5rem'}}/>
@@ -23,6 +23,11 @@ const Header = (props) => {
           {props.registro && <div className="carritoDiv">
             <Link to="/registro" style={{textDecoration: 'none', color: 'white', fontFamily: 'var(--nerko)', fontSize:'1.8rem'}}>
             REGISTRARSE
+            </Link>
+            </div>}
+            {props.login && <div className="carritoDiv">
+            <Link to="/login" style={{textDecoration: 'none', color: 'white', fontFamily: 'var(--nerko)', fontSize:'1.8rem'}}>
+            INICIAR SESIÓN
             </Link>
             </div>}
         </div>

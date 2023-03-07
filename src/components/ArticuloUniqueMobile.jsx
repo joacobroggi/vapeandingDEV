@@ -8,7 +8,7 @@ import { publicRequest } from '../requestMethods';
 
 
 
-const ArticuloM = (props)=> {
+const ArticuloUniqueMobile = (props)=> {
 
     let id = props.id;
     const dispatch = useDispatch();
@@ -51,47 +51,46 @@ const ArticuloM = (props)=> {
         dispatch(
           addProducto({...producto, cantidad})
         )
-        
       };
 
 
     return (
         <div className="articuloM">
                 <img src={require('../img/'+props.img)} alt="" className="imgArticuloM2"/>
-
-                <div className="articuloBottomM">
-                    <h2 className="articuloMTitle">{props.titulo}</h2>
-                    <h5 className="fullTitleArticulo">
+               
+                <div className={"articuloBottomM" + props.tema}>
+                    <img src={require('../img/'+ props.logo)} className={'logoArticuloM' + props.tema} alt="" />
+                    <h5 className={"fullTitleArticulo" + props.tema}>
                     {props.fullTitulo}
                     </h5>
                     <p className="descArticuloM">
                         {props.desc}
                     </p>
 
-                    <h5 className="detallesH5M">
+                    <h5 className={"detallesH5M" + props.tema}>
                         Información del producto:
                     </h5>
                     <div className="detallesM">
                         <div className="detalleM">
-                            <span className='detalleMspan'>+{props.pitadas}</span>
-                            <h6 className="detalleH6">Pitadas</h6>
+                            <span className={"detalleH6"+props.tema}>+{props.pitadas}</span>
+                            <h6 className={"detalleH6"+props.tema}>Pitadas</h6>
                         </div>
                         <div className="detalleM">
-                            <span className='detalleMspan'>+{props.nicotina}</span>
-                            <h6 className="detalleH6">Nicotina</h6>
+                            <span className={"detalleH6"+props.tema}>+{props.nicotina}</span>
+                            <h6 className={"detalleH6"+props.tema}>Nicotina</h6>
                         </div>
                         <div className="detalleM">
-                        {tabaco &&  <span className="iconSabor detalleMspan">
+                        {tabaco &&  <span className={"iconSabor" + props.tema}>
                 <FontAwesomeIcon icon={faSmoking}></FontAwesomeIcon>
                   </span>}
-                  {frutal && <span className="iconSabor detalleMspan">
+                  {frutal && <span className={"iconSabor" + props.tema}>
                 <FontAwesomeIcon icon={faLemon}></FontAwesomeIcon>
                   </span>}
-                            <h6 className="detalleH6">{props.sabor}</h6>
+                            <h6 className={"detalleH6"+props.tema}>{props.sabor}</h6>
                         </div>
                     </div>
 
-                    <button onClick={handleClick} className="btnArticuloM">Agregar al carrito por {props.precio} </button>
+                    <button onClick={handleClick} className={"btnArticuloM" + props.tema}>Agregar al carrito por {props.precio} </button>
 
 
                 </div>
@@ -99,4 +98,4 @@ const ArticuloM = (props)=> {
     )
 }
 
-export default ArticuloM;
+export default ArticuloUniqueMobile;

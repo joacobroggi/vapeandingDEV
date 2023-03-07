@@ -28,7 +28,7 @@ const ordenSlice = createSlice({
       state.userId = action.payload.userId;
       state.hasOrdered = action.payload.hasOrdered;
     },
-    removeOrden: (state, action)=> {
+    terminarOrden: (state, action)=> {
         state.total = 0;
         state.productos = [];
         state.envio = 0;
@@ -36,7 +36,7 @@ const ordenSlice = createSlice({
         state.direccion = '';
         state.apartamento = '';
         state.telefono = '';
-     
+        state.hasOrdered = action.payload.hasOrdered;
     }
   },
 });

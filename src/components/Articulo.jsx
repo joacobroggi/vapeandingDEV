@@ -1,4 +1,5 @@
 import {faSmoking, faLemon} from '@fortawesome/free-solid-svg-icons';
+
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import { useDispatch } from 'react-redux';
 import { useState } from 'react';
@@ -12,6 +13,8 @@ const ArticuloC = (props)=> {
     // let iteration = aspectos.length;
     let id = props.id;
     const dispatch = useDispatch();
+
+
 
     const [producto, setProducto] = useState({});
     const [cantidad, setCantidad] = useState(1);
@@ -41,22 +44,12 @@ const ArticuloC = (props)=> {
         }
         
       }
+     
+      
       getProducto()
     }, [id])
 
-    const handleCantidad = (type)=> {
-      if (type === 'dec') {
-        setCantidad(cantidad - 1)
-        if (cantidad <= 1) {
-          setCantidad(1)
-        }
-      } else {
-          setCantidad(cantidad + 1)
-            if (cantidad < 0) {
-              setCantidad(0)
-          }
-        }
-      }
+   
 
     const handleClick = ()=>{
       producto.claveUnica = getRandomInt(10000000);
@@ -109,7 +102,7 @@ const ArticuloC = (props)=> {
           <div className="derecha">
             
             
-            <Link to='/carrito' className="h2Precio" onClick={handleClick}>AGREGAR AL CARRITO - <b className="valor">${props.precio}</b></Link>
+           {props.hasOrdered ?  <Link to='/carrito' className="h2Precio" >NO PODES - <b className="valor">${props.precio}</b></Link> :  <Link to='/carrito' className="h2Precio" onClick={handleClick}>AGREGAR AL CARRITO - <b className="valor">${props.precio}</b></Link>}
           </div>
         </div>
     )

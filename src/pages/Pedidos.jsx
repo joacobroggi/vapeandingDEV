@@ -2,10 +2,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
 import "./css/envios.css";
-import Footer from "../components/Footer";
-import { Link, useNavigate } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCaretDown, faChevronLeft } from "@fortawesome/free-solid-svg-icons";
+import Header from "../components/Header";
 import { publicRequest } from "../requestMethods";
 
 const Pedidos = () => {
@@ -30,27 +27,14 @@ const Pedidos = () => {
       })
       .then((res) => {
         setData(res.data);
+        
         console.log(data);
       });
   }, []);
 
   return (
     <div className="enviosMain">
-      <div className="breadCrumb">
-        <Link to="/comprar" className="linkBreadcrumb">
-          Home
-        </Link>
-        <span className="separadorBreadCrumb">
-          <FontAwesomeIcon icon={faChevronLeft}></FontAwesomeIcon>
-        </span>
-        <Link to="/carrito" className="linkBreadcrumb">
-          Carrito
-        </Link>
-        <span className="separadorBreadCrumb">
-          <FontAwesomeIcon icon={faChevronLeft}></FontAwesomeIcon>
-        </span>
-        <Link className="linkBreadcrumbActive">Pedidos</Link>
-      </div>
+     <Header noPedidos={true}></Header>
 
       {data && (
         <div className="enviosCont">
@@ -60,8 +44,8 @@ const Pedidos = () => {
               <h2 className="h2Orden">¡Tu orden fue realizada con éxito!</h2>
               <hr className="hrEnvios2"/>
               <p className="pOrden">
-                Ya estas cada vez más cerca de tu vaper {usuario.nombre}, te
-                mandamos el recibo por email a {usuario.email}{" "}
+                Ya estas cada vez más cerca de tu vaper {usuario.nombre}. Te
+                mandamos el recibo por email a {usuario.email}
               </p>
             </div>
             
@@ -100,9 +84,9 @@ const Pedidos = () => {
                   <h5 className="subH5">
                     {(() => {
                       switch (orden.entrega) {
-                        case 390:
+                        case '390':
                           return "Envio 24 horas:";
-                        case 490:
+                        case '490':
                           return "Envio Inmediato:";
                         default:
                           return "Envio 1 - 3 días:";

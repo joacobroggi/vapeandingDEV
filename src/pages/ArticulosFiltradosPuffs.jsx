@@ -5,7 +5,10 @@ import Producto from "../components/Producto";
 import Header from "../components/Header";
 import HeaderM from "../components/HeaderM";
 import MobileProducto from "../components/MobileProducto";
-import './css/articulos.css'
+import './css/articulos.css';
+import Footer from "../components/Footer";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 
 
 
@@ -28,8 +31,10 @@ const ArticulosFiltradosPuffs = ()=> {
         <div className="articulosMain">
         <div className="articulosDesk">
        <Header carrito={true}></Header>
-        <div className="cartelArticulos">
-            <h2 className="h2Articulos">{puffs}</h2>
+       <div className="cartelFiltro">
+        <Link to='/comprar' style={{alignSelf: 'flex-start', marginLeft:'2%'}}><FontAwesomeIcon icon={faArrowLeft} className='arrowArticulo' ></FontAwesomeIcon></Link>
+            <h2 className="h2Articulos">Vapes con {puffs} pitadas</h2>
+           
         </div>
        
        

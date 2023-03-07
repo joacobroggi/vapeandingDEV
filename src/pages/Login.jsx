@@ -5,8 +5,9 @@ import { login } from "../redux/apiCalls";
 import { useDispatch, useSelector } from "react-redux";
 import "./css/login.css";
 
+
 const Login = () => {
-  const [usuario, setUsuario] = useState("");
+  const [email, setEmail] = useState("");
   const [clave, setClave] = useState("");
   const dispatch = useDispatch();
 
@@ -14,7 +15,7 @@ const Login = () => {
 
   const handleLogin = (e) => {
     e.preventDefault();
-    login(dispatch, { usuario, clave });
+    login(dispatch, { email, clave });
   };
 
   return (
@@ -25,14 +26,14 @@ const Login = () => {
       <div className="loginCard">
         <h3 className="h3Login">Iniciar Sesión</h3>
         <div className="loginForm">
-
+       
      
           <label className="labelLogin">Email:</label>
         
           <input
             type="email"
             placeholder="joaquinmbroggi@gmail.com"
-            onChange={(e) => setUsuario(e.target.value)}
+            onChange={(e) => setEmail(e.target.value)}
 
             className='inputIniciar'
           />
@@ -46,8 +47,8 @@ const Login = () => {
             className='inputIniciar'
           />
         
-
-          <button onClick={handleLogin} disabled={isFetching} className='enviarLogin'>
+        {error && <h3 className="errorH3">La contraseña y/o el email son incorrectos</h3>}
+          <button onClick={handleLogin} disabled={isFetching} className={error ? 'enviarLoginErr' : 'enviarLogin'}>
            Enviar
           </button>
 
@@ -58,7 +59,7 @@ const Login = () => {
         </div>
       </div>
 
-      {error && <h2>SOS UN ULTRA MOGOLICO</h2>}
+     
     </div>
     <Footer></Footer>
     </div>

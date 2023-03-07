@@ -24,7 +24,7 @@ const CarritoItem = (props)=> {
             <div className="itemContainerC">
             <img src={props.img} alt={props.img} className='imgC'/>
             <h4 className="itemTitleC">{props.titulo}</h4>
-            <h5 className="saborC"></h5>
+            <h5 className="saborC">{props.sabor}</h5>
             
             <h5 className="precioC">${props.precio}</h5>
             </div>

@@ -13,7 +13,8 @@ import Comprar from './pages/Comprar';
 import Pago from './pages/Pago';
 import ArticulosFiltradosMarca from './pages/ArticulosFiltrados';
 import ArticulosFiltradosPuffs from './pages/ArticulosFiltradosPuffs';
-import Pedidos from './pages/Pedidos.jsx'
+import Pedidos from './pages/Pedidos.jsx';
+import ArticulosFiltradostipoSabor from './pages/ArticulosFiltradostipoSabor'
 
 function App() {
   const usuario = useSelector((state) => state.user.currentUser);
@@ -31,6 +32,7 @@ function App() {
       <Route path="/about" element={<About />}></Route>
 
       <Route path='/filtros/marca/:marca' element={<ArticulosFiltradosMarca />}></Route>
+      <Route path='/filtros/tipoSabor/:tipoSabor' element={<ArticulosFiltradostipoSabor />}></Route>
 
       <Route path='/filtros/puffs/:puffs' element={<ArticulosFiltradosPuffs />}></Route>
 

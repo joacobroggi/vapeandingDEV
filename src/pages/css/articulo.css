@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 .articuloBody {
-    background-image: url('../../img/fondoRosa.jpg');
+    background-image: url('../../img/fondoAzul.jpg');
     background-position: center;
     height: 90vh;
     padding-top: 5%;
@@ -42,11 +42,13 @@
     margin: 1%;
 }
 .imgArticuloC {
-    width: 32vw;
-    height: 70vh;
+    /* width: 32vw; */
+    height: 75vh;
     align-self: center;
     justify-content: center;
-    transform: rotate(25deg);
+    position: absolute;
+    left: 60%;
+    top: 10.5%;
 }
 .imgArticuloUniquehungria {
     width: 40vw;
@@ -298,16 +300,34 @@
     -webkit-text-stroke: 1px #AEEDFF;
 
 }
+.articuloMobileHungria {
+    display: none;
+}
+.articuloMobileParty {
+    display: none;
+}
 @media (max-width: 576px) { 
     .articuloDesk {
         display: none;
     }
     .articuloMobile {
         display: block;
-        background-image: url('../../img/fondoVioleta.jpg');
+        background-image: url('../../img/fondoAzul.jpg');
         background-position: center;
         height: 100%;
         
+    }
+    .articuloMobileHungria {
+        display: block;
+        background-color: black;
+        background-position: center;
+        height: 100%;
+    }
+    .articuloMobileParty {
+        display: block;
+        background-color: black;
+        background-position: center;
+        height: 100%;
     }
     .imgArticuloM2 {
         width: 100%;
@@ -318,6 +338,18 @@
         border-top-left-radius: 35px;
         border-top-right-radius: 35px;
         border-top: 2px solid white;
+        padding: 5%;
+        display: flex;
+        flex-direction: column;
+    }
+    .articuloBottomMhungria {
+        
+        padding: 5%;
+        display: flex;
+        flex-direction: column;
+    }
+    .articuloBottomMparty {
+        
         padding: 5%;
         display: flex;
         flex-direction: column;
@@ -336,14 +368,14 @@
         color: white;
         text-transform: uppercase;
         font-weight: 400;
-        font-size: 1rem;
+        font-size: 1.2rem;
         margin-bottom: 2.5%;
     }
     .descArticuloM {
         font-family: var(--nerko);
         color: white;
         font-weight: 400;
-        font-size: 1.3rem;
+        font-size: 1.2rem;
         margin-bottom: 6%;
     }
     .detallesM {
@@ -357,6 +389,26 @@
         font-weight: 400;
         text-transform: uppercase;
         font-size: 1.3rem;
+        margin-bottom: 2%;
+    }
+    .detallesH5Mhungria {
+        font-family: var(--nerko);
+        color: #E40D18;
+        font-weight: 400;
+        text-transform: uppercase;
+        font-size: 1.3rem;
+        margin-bottom: 2%;
+        
+    }
+    .detallesH5Mparty {
+        font-family: var(--nerko);
+        font-weight: 400;
+        color: transparent;
+        -webkit-text-stroke: 1px #AEEDFF;
+        text-transform: uppercase;
+        font-size: 1.3rem;
+        margin-bottom: 2%;
+        
     }
     .detalleH6 {
         font-family: var(--nerko);
@@ -364,17 +416,39 @@
         font-weight: 400;
         font-size: 1.1rem;
     }
+    .detalleH6hungria {
+        font-family: var(--nerko);
+        
+        font-weight: 400;
+        font-size: 1.1rem;
+        font-family: var(--open);
+        font-weight: 800;
+        color: transparent;
+        -webkit-text-stroke: 1px #E40D18;
+        text-transform: uppercase;
+    }
+    .detalleH6party {
+        font-family: var(--nerko);
+        
+        font-weight: 400;
+        font-size: 1.4rem;
+        font-family: var(--nerko);
+        font-weight: 400;
+        color: transparent;
+        -webkit-text-stroke: 1px #AEEDFF;
+        text-transform: uppercase;
+    }
     .detalleM {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
-    .detalleM span {
+    .detalleMspan {
         font-family: var(--nerko);
-        color: white;
+        /* color: white; */
         font-weight: 400;
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
     .btnArticuloM {
         background: linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%), rgba(255, 255, 255, 0.3);
@@ -390,5 +464,74 @@
         text-transform: uppercase;
         margin-top: 8%;
         
+    }
+    .detalleMspan {
+        color: white;
+    }
+    .btnArticuloMhungria {
+        background-color: #E40D18;
+        
+        border: 1px solid transparent;
+      
+        border-radius: 20px;
+        padding: 2% 4%;
+        font-family: var(--nerko);
+        color: white;
+        font-weight: 400;
+        font-size: 1.3rem;
+        text-transform: uppercase;
+        margin-top: 8%;
+        
+    }
+    .btnArticuloMparty {
+        background-color: transparent;
+        
+        border: 1.5px solid #AEEDFF;
+      
+        border-radius: 20px;
+        padding: 2% 4%;
+        font-family: var(--nerko);
+        color: #AEEDFF;
+        font-weight: 400;
+        font-size: 1.3rem;
+        text-transform: uppercase;
+        margin-top: 8%;
+        
+    }
+    .logoArticuloMhungria {
+        width: 55%;
+        margin-bottom: 4%;
+    }
+    .logoArticuloMparty {
+        width: 55%;
+        margin-bottom: 0%;
+        margin: 0 auto;
+    }
+    .fullTitleArticulohungria {
+        font-family: var(--nerko);
+       
+        text-transform: uppercase;
+        font-weight: 400;
+        font-size: 1.2rem;
+        margin-bottom: 2.5%;
+        color: #E40D18;
+    }
+    .fullTitleArticuloparty {
+        font-family: var(--nerko);
+        -webkit-text-stroke: 1px #AEEDFF;
+        text-transform: uppercase;
+        font-weight: 400;
+        font-size: 1.2rem;
+        margin-bottom: 2.5%;
+        color: transparent;
+        margin-top: 2.5%;
+    }
+    .iconSaborhungria {
+        color: #E40D18;
+        font-size: 1.3rem;
+    }
+    .iconSaborparty {
+        color: #AEEDFF;
+        font-size: 1.3rem;
     }
  }
