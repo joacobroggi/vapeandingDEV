@@ -1,6 +1,8 @@
 import { useState } from "react";
 import Header from "../components/Header";
+import HeaderM from '../components/HeaderM'
 import Footer from "../components/Footer";
+import FooterM from "../components/FooterM";
 import { login } from "../redux/apiCalls";
 import { useDispatch, useSelector } from "react-redux";
 import "./css/login.css";
@@ -21,6 +23,7 @@ const Login = () => {
   return (
     <div>
     <Header registro={true}></Header>
+    <HeaderM registro={true}></HeaderM>
     <div className="loginBody">
         
       <div className="loginCard">
@@ -62,6 +65,7 @@ const Login = () => {
      
     </div>
     <Footer></Footer>
+    <FooterM></FooterM>
     </div>
   );
 };

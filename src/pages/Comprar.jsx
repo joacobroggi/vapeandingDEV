@@ -189,6 +189,33 @@ const continuar = (e)=> {
           </div>
         </div>
       </div>
+
+      <div className="comprarM">
+      <div className="comprarForm">
+      <label className="labelComprar">Dirección:</label>
+        <input
+          type="text"
+          placeholder="Cordoba 1234"
+          onChange={(e) => setDireccion(e.target.value)}
+          className='inputIniciar'
+        />
+<label className="labelComprar">Apartamento (opcional):</label>
+        <input
+          type="text"
+          placeholder="5B"
+          onChange={(e) => setApartamento(e.target.value)}
+          className='inputIniciar'
+        />
+
+<label className="labelComprar">Número de Télefono:</label>
+        <input
+          type="text"
+          placeholder="3412756433"
+          onChange={(e) => setTelefono(e.target.value)}
+          className='inputIniciar'
+        />
+      </div>
+      </div>
       <Footer></Footer>
     </div>
   );

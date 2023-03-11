@@ -137,7 +137,7 @@ const Articulo = () => {
         <Footer></Footer>
       </div>
 
-      <HeaderM></HeaderM>
+      <HeaderM carrito={true}></HeaderM>
       {data && generico && (
         <div className="articuloMobile">
           <ArticuloM

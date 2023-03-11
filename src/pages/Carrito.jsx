@@ -21,6 +21,7 @@ const Carrito = () => {
   const [envio1, setEnvio1] = useState(false);
   const [envio2, setEnvio2] = useState(false);
   const [envio3, setEnvio3] = useState(false);
+  const [dropdownOp, setDropdownOp] = useState(false)
 
   const handleEnvio3 = () => {
     setEnvio3(true);
@@ -119,10 +120,14 @@ const Carrito = () => {
       setEnvioName('Envío en rango de 1 - 3 días');
       setEnvioPrice(0);
       setEnvioSelected(true);
+      alert('Hoy no esta disponible este tipo de envio')
       dispatch(
         addEnvio(0)
       )
     }
+  }
+  const dropdownOpciones = ()=> {
+      setDropdownOp((current) => !current);
   }
 
   return (
@@ -212,12 +217,29 @@ const Carrito = () => {
       </div>
 
       {/* MOBILE */}
-
+      
       <div className="carritoMobile">
-        <HeaderM></HeaderM>
+      <HeaderM></HeaderM>
 
-        <div className="dropCarritoM">
-          <button className="opcionesEntregaMobile">Opciones de entrega</button>
+        <div className={dropdownOp ? "dropCarritoMA" : "dropCarritoM"}>
+          <button className="opcionesEntregaMobile" onClick={dropdownOpciones}>Opciones de entrega</button>
+          <div className={dropdownOp ? 'dropdownEntrega' : 'hide'}>
+            <div className={envio1 ? "opcionMA" : 'opcionM'} onClick={() => CheckEnvioInmediato()}>
+              <h3 className="h3OpcionM">Entrega Inmediata ($490 adicionales)</h3>
+              <p className="pOpcionM">Entrega con envio en un rango de entre 15 y 90 minutos
+                      dependiendo de la zona. SOLO DISPONIBLE VIERNES Y SABADOS
+                      DESDE LAS 18 HASTA LAS 02.</p>
+            </div>
+
+            <div className={envio2 ? "opcionMA" : 'opcionM'} onClick={() => checkEnvio24()}>
+              <h3 className="h3OpcionM">24 HORAS ($390 ADICIONALES)</h3>
+              <p className="pOpcionM">Entrega con envio en un rango de 24 horas. DISPONIBLE DE LUNES A VIERNES.</p>
+            </div>
+            <div className={envio3 ? "opcionMA" : 'opcionM'} onClick={handleEnvio3}>
+              <h3 className="h3OpcionM">1 - 3 dias (0$ adicionales)</h3>
+              <p className="pOpcionM">Entrega con envio en un rango de 72 horas. DISPONIBLE DE SIEMPRE.</p>
+            </div>
+          </div>
         </div>
 
         <div className="productosCarritoMobile">
@@ -241,8 +263,8 @@ const Carrito = () => {
             </div>
 
             <div className="envioCMobileCont">
-              <h5 className="envioCMobile">Envio</h5>
-              <h5 className="envioCMobile">$490</h5>
+              <h5 className="envioCMobile">{envioName}</h5>
+              <h5 className="envioCMobile">${envioPrice}</h5>
             </div>
 
             <div className="totalCMobileCont">
@@ -251,7 +273,7 @@ const Carrito = () => {
             </div>
           </div>
           <div className="terminarCompraMobileDiv">
-            <Link className="terminarCompraMobile">TERMINAR COMPRA</Link>
+           {envioSelected ?  <Link to='/checkout' className="terminarCompraMobile">TERMINAR COMPRA</Link> :  <Link to='/carrito' className="terminarCompraMobile">ELIGE UN ENVIO PARA CONTINUAR</Link>}
           </div>
         </div>
       </div>

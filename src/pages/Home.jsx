@@ -7,8 +7,30 @@ import FooterM from "../components/FooterM";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCloud } from "@fortawesome/free-solid-svg-icons";
+import { useState } from "react";
 
 const Home = () => {
+  const [swipe1, setSwipe1] = useState(true);
+  const [swipe2, setSwipe2] = useState(false);
+  const [swipe3, setSwipe3] = useState(false);
+
+
+  const goToSwiper1 = ()=> {
+    setSwipe1(true);
+    setSwipe2(false);
+    setSwipe3(false);
+  }
+  const goToSwiper2 = ()=> {
+    setSwipe1(false);
+    setSwipe2(true)
+    setSwipe3(false)
+  }
+  const goToSwiper3 = ()=> {
+    setSwipe1(false);
+    setSwipe2(false)
+    setSwipe3(true)
+  }
+
   return (
     <div>
       <div className="homeDesk">
@@ -26,10 +48,13 @@ const Home = () => {
         </div>
         <Footer></Footer>
       </div>
+
+
+
       <div className="homeMobile">
         <div className="home1M">
           <div className="filtroHM">
-            <HeaderM></HeaderM>
+            <HeaderM carrito={true}></HeaderM>
             <div className="txtHome1M">
               <h2 className="titleHomeM"> 2x1 EN VAPERS IGNITE</h2>
               <p className="pHome1M">
@@ -40,22 +65,26 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="home2M">
-          <h2 className="h2Home2M">IGNITE, MARCA LIDER EN CALIDAD.</h2>
-          <p className="pH2M">
-            Ignite es una marca que se caracteriza por tener calidad y diseño
-            premium. Con una amplia variedad de sabores, opciones y precios
-            accesibles, Ignite es una de las marcas lideres en el mundo del
-            vaping.
-          </p>
-          <img
-            src={require("../img/ignite1.webp")}
-            alt=""
-            className="imgHome2M"
-          />
+        <div className={swipe1 ? "home2M" : 'hide'}>
           <div className="botoneraH2M">
             <span className="dot1"></span>
-            <span className="dot2"></span>
+            <span className="dot2" onClick={goToSwiper2}></span>
+          </div>
+        </div>
+        <div className={swipe2 ? "home2M2" : 'hide'}>
+          
+          
+          <div className="botoneraH2M">
+            <span className="dot2" onClick={goToSwiper1}></span>
+            <span className="dot1"></span>
+          </div>
+        </div>
+
+        <div className="home3M">
+          <div className="txtHome3M">
+            <h3 className="h3home3M">ESTAMOS REVOLUCIONANDO EL VAPING ROSARINO</h3>
+            <p className="phome3M">Nuestra página es la mejor opción para conseguir tu vaper, con envios en solo MINUTOS, precios accesibles y solo productos originales.</p>
+            <Link className="lhome3M">CONOCENOS</Link>
           </div>
         </div>
 

@@ -296,8 +296,8 @@ h1 {
 
 
   
-
-@media (max-width: 576px) { 
+/* SMARTPHONES */
+@media (min-width: 330px) and (max-width: 576px) { 
     .homeDesk {
         display: none;
     }
@@ -307,7 +307,8 @@ h1 {
     .home1M {
         background-image: url('../../img/fondoHumo.gif');
         background-size: cover;
-        height: 60vmax;
+     
+        height: calc(var(--vh, 1vh) * 60);
         background-position: center;
         
     }
@@ -332,7 +333,7 @@ h1 {
         color: white;
         font-weight: 400;
         font-size: 3rem;
-        margin-top: 0;
+       
         text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
         text-transform: uppercase;
     }
@@ -345,14 +346,26 @@ h1 {
         
     }
     .home2M {
-        height: 100%;
-        background-image: url('../../img/fondoVioleta.jpg');
+        height: calc(var(--vh, 1vh) * 40);
+        background-image: url('../../img/bannerHungria.png');
         background-size: cover;
         background-position: center;
         display: flex;
         flex-direction: column;
         text-align: center;
         align-items: center;
+        justify-content: flex-end;
+    }
+    .home2M2 {
+        height: calc(var(--vh, 1vh) * 40);
+        background-image: url('../../img/zomoBanner.png');
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        justify-content: flex-end;
     }
     .h2Home2M {
         font-family: var(--chango);
@@ -403,5 +416,210 @@ h1 {
         font-size: 1.5rem;
         font-weight: 400;
         text-transform: uppercase;
+      }
+      .home3M {
+        height: calc(var(--vh, 1vh) * 40);
+        background-image: url('../../img/fondoAzul.jpg');
+        background-position: center;
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .txtHome3M {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+      .h3home3M {
+        color: white;
+        font-family: var(--chango);
+        font-weight: 400;
+        font-size: 1.3rem;
+        margin-top: 2.5%;
+        margin-bottom: 2%;
+        width: 90%;
+      }
+      .phome3M {
+        font-size: 1rem;
+        width: 90%;
+        font-family: var(--nerko);
+        color: white;
+        font-weight: 400;
+        margin-bottom: 4%;
+      }
+      .lhome3M {
+        font-family: var(--nerko);
+        color: white;
+        text-decoration: none;
+        background: linear-gradient(154.49deg, rgba(184, 179, 200, 0.2) 5.35%, rgba(54, 53, 103, 0.2) 83.85%), rgba(255, 255, 255, 0.03);
+        padding: 2% 6%;
+        border-radius: 6px;
+        border-top: solid 0.8px rgba(255, 255, 255, 1);
+        border-bottom: solid 0.5px rgba(255, 255, 255, 0.1);
+      }
+ }
+
+
+ /* SMARTPHONES PEQUEÑOS */
+ @media (min-width: 100px) and (max-width: 330px) { 
+    .homeDesk {
+        display: none;
+    }
+    .homeMobile {
+        display: block;
+    }
+    .home1M {
+        background-image: url('../../img/fondoHumo.gif');
+        background-size: cover;
+     
+        height: calc(var(--vh, 1vh) * 40);
+        background-position: center;
+        
+    }
+    .txtHome1M {
+        
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 90%;
+        margin: 0 auto;
+    }
+    .filtroHM {
+        background: linear-gradient(154.49deg, rgba(184, 179, 200, 0.2) 5.35%, rgba(54, 53, 103, 0.2) 83.85%), rgba(255, 255, 255, 0.03);
+        height: 100%;
+        backdrop-filter: blur(1px);
+    }
+    .titleHomeM {
+        font-family: var(--nerko);
+        color: white;
+        font-weight: 400;
+        font-size: 2.5rem;
+       
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        text-transform: uppercase;
+    }
+    
+    .pHome1M {
+        font-family: var(--nerko);
+        color: white;
+        font-weight: 400;
+        font-size: 1rem;
+        
+    }
+    .home2M {
+        height: 28vmax;
+        background-image: url('../../img/bannerHungria.png');
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    .home2M2 {
+        height: 28vmax;
+        background-image: url('../../img/zomoBanner.png');
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    .h2Home2M {
+        font-family: var(--chango);
+        color: white;
+        font-weight: 400;
+        font-size: 1.5rem;
+        width: 90%;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        margin-top: 5%;
+    }
+    .pH2M {
+        font-family: var(--nerko);
+        color: white;
+        font-weight: 400;
+        font-size: 1.1rem;
+        width: 90%;
+        margin-top: 3%;
+    }
+    .imgHome2M {
+        width: 100%;
+    }
+    .dot2 {
+        height: 5vmin;
+        width: 5vmin;
+        background-color: transparent;
+        border: 1px solid white;
+        border-radius: 50%;
+        display: inline-block;
+      }
+      .dot1 {
+        height: 5vmin;
+        width: 5vmin;
+        background-color: white;
+        
+        border-radius: 50%;
+        display: inline-block;
+      }
+      .botoneraH2M {
+        display: flex;
+        justify-content: space-between;
+        width: 12%;
+        margin-bottom: 4%;
+      }
+      
+      .home3M {
+        height: calc(var(--vh, 1vh) * 45);
+        background-image: url('../../img/fondoAzul.jpg');
+        background-position: center;
+        background-size: cover;
+        display: flex;
+      }
+      .txtHome3M {
+        display: flex;
+        width: 100%;
+       
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+      .h3home3M {
+        color: white;
+        font-family: var(--chango);
+        font-weight: 400;
+        font-size: 1.1rem;
+        margin-top: 2.5%;
+        margin-bottom: 2%;
+        width: 90%;
+      }
+      .phome3M {
+        font-size: 1rem;
+        width: 90%;
+        font-family: var(--nerko);
+        color: white;
+        font-weight: 400;
+        margin-bottom: 4%;
+      }
+      .lhome3M {
+        font-family: var(--nerko);
+        color: white;
+        text-decoration: none;
+        background: linear-gradient(154.49deg, rgba(184, 179, 200, 0.2) 5.35%, rgba(54, 53, 103, 0.2) 83.85%), rgba(255, 255, 255, 0.03);
+        padding: 2% 6%;
+        border-radius: 6px;
+        border-top: solid 0.8px rgba(255, 255, 255, 1);
+        border-bottom: solid 0.5px rgba(255, 255, 255, 0.1);
       }
  }

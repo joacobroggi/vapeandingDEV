@@ -5,7 +5,7 @@ import { useState } from 'react';
 import {addProducto} from '../redux/cartRedux'
 import { useEffect } from 'react';
 import { publicRequest } from '../requestMethods';
-
+import { Link } from 'react-router-dom';
 
 
 const ArticuloM = (props)=> {
@@ -91,7 +91,7 @@ const ArticuloM = (props)=> {
                         </div>
                     </div>
 
-                    <button onClick={handleClick} className="btnArticuloM">Agregar al carrito por {props.precio} </button>
+                    <Link to='/carrito' onClick={handleClick} className="btnArticuloM" style={{textAlign:'center', textDecoration: 'none'}}>Agregar al carrito por {props.precio} </Link>
 
 
                 </div>

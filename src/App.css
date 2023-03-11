@@ -4,6 +4,7 @@
     --chango: 'Chango', cursive;
     --nerko: 'Nerko One', cursive;
     --open: 'Open Sans', sans-serif;
+    --cien: calc(var(--vh, 1vh) * 100); 
 }
 html {
   scroll-behavior: smooth;

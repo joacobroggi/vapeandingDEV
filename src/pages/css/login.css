@@ -260,3 +260,73 @@ margin-top: 5%;
     color: gainsboro;
    
   }
+
+
+
+  @media (min-width: 330px) and (max-width: 576px) { 
+    .loginBody {
+      background-image: url('../../img/fondoRegistro.png');
+      background-size: cover;
+      background-position: center;
+    }
+    .registerCard {
+      width: 90%;
+      padding: 0%;
+      justify-content: flex-start;
+      min-height: calc(var(--vh, 1vh) * 65);
+    }
+    .h3Login {
+      font-size: 3rem;
+    }
+    .loginCard {
+      width: 90%;
+      padding: 0%;
+      justify-content: flex-start;
+      min-height: calc(var(--vh, 1vh) * 65);
+    }
+    .loginForm {
+      width: 80%;
+      height: 100%;
+    }
+    .edadRegistro {
+      height: calc(var(--vh, 1vh) * 5.5);
+    }
+    .loginForm2 {
+      width: 80%;
+      height: 100%;
+    }
+    .inputIniciar {
+       width: 100%;
+       height: calc(var(--vh, 1vh) * 3.5);
+   }
+   .nombreRegistro2 {
+    width: 94%;
+    height: calc(var(--vh, 1vh) * 3.5);
+   }
+.headerDiv {
+  display: none;
+}
+.footer {
+  display: none;
+}
+.enviarLogin {
+  width: 100%;
+  height: calc(var(--vh, 1vh) * 5);
+}
+.enviarLoginErr {
+  width: 100%;
+  height: calc(var(--vh, 1vh) * 5);
+}
+.googleLogin {
+  width: 100%;
+  height: calc(var(--vh, 1vh) * 7.5);
+  margin-bottom: 4%;
+}
+  }
+
+
+
+/* Sm Smartphones */
+  @media (min-width: 100px) and (max-width: 330px) { 
+
+  }

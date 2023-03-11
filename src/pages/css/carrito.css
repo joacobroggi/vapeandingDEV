@@ -212,11 +212,14 @@
   }
   .carritoMobile {
     display: block;
-    background-image: url("../../img/fondoVioleta.jpg");
+    background-image: url("../../img/fondoAzul.jpg");
+    background-size: cover;
+    background-position: center;
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100vmax;
+    min-height: 100vmax;
+    height: 100%;
   }
   .productosCarritoMobile {
     display: flex;
@@ -224,22 +227,25 @@
     align-items: center;
   }
   .dropCarritoM {
-    margin-top: 20%;
+    margin-top: 10%;
     margin-bottom: 10%;
-    width: 100%;
+    width: 90%;
+    text-align: center;
     display: flex;
     align-self: center;
     justify-content: center;
+    flex-direction: column;
   }
 
   .opcionesEntregaMobile {
+    
     background: linear-gradient(
         180deg,
         rgba(255, 255, 255, 0.2) 0%,
         rgba(255, 255, 255, 0) 100%
       ),
       rgba(255, 255, 255, 0.3);
-    backdrop-filter: blur(2px);
+   
     border-radius: 20px;
     padding: 1.5% 15%;
     border: none;
@@ -251,9 +257,10 @@
     color: white;
     text-transform: uppercase;
     font-weight: 400;
-    font-size: 1.5rem;
-    display: flex;
-    align-items: center;
+    font-size: 1.3rem;
+    width: 90%;
+    align-self: center;
+    margin: 2%;
   }
   .itemCartM {
     width: 95%;
@@ -397,10 +404,53 @@
     text-decoration: none;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   }
+  .opcionM {
+    margin: 2%;
+  }
+  .opcionMA {
+    margin: 2%;
+    outline: 2px dashed white;
+    border-radius: 20px;
+  }
+ .h3OpcionM {
+    color: white;
+    font-size: 1.3rem;
+    padding: 0 1%;
+    font-family: var(--nerko);
+    font-weight: 400;
+    text-transform: uppercase;
+ }
+ .pOpcionM {
+  color: white;
+  font-size: 1rem;
+  font-family: var(--nerko);
+  font-weight: 400;
+  padding: 0% 2%;
+}
+
+  .dropCarritoMA {
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.2) 0%,
+      rgba(255, 255, 255, 0) 100%
+    ),
+    rgba(255, 255, 255, 0.3);
+    margin-top: 10%;
+    margin-bottom: 10%;
+    width: 90%;
+    text-align: center;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 20px;
+  }
   
-    @media screen and ( max-height: 701px ) { 
-        .terminarCompraMobile {
-            margin-bottom: 15%;
-        }
-    }
+   
+}
+
+@media screen and ( max-height: 701px ) { 
+  .terminarCompraMobile {
+      margin-bottom: 15%;
+  }
 }

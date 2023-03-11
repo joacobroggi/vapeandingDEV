@@ -61,7 +61,7 @@
 
 .headerDivM {
     width: 96%;
-  
+    
     
     display: flex;
     padding: 2%;
@@ -87,21 +87,56 @@
 .headerM {
     position: fixed;
     width: 100%;
+ 
 }
 .headerMBlured {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(2px);
+    /* background: black; */
+    position: fixed;
+    padding-bottom: 3%;
+    
 }
 .sobreEscabianding {
     margin-right: 2%;
 }
 
+.itemDropdwon {
+    font-family: var(--nerko);
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-left: 4%;
+    padding: 0.7%;
+  }
 
 
 .slide-in-left {
 	-webkit-animation: slide-in-left 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 	        animation: slide-in-left 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+            animation-delay: 0.4s;
 }
+
+.slide-out-left {
+	-webkit-animation: slide-out-left 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-out-left 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+            animation-delay: 0.3s;
+}
+
+.fade-in {
+	-webkit-animation: fade-in 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: fade-in 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+.fade-out {
+	-webkit-animation: fade-out 0.3s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: fade-out 0.3s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+
+
+
+
+
 
 @-webkit-keyframes slide-in-left {
     0% {
@@ -127,3 +162,76 @@
       opacity: 1;
     }
   }
+
+  @-webkit-keyframes slide-out-left {
+    0% {
+      
+
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+      opacity: 1;
+    }
+    100% {
+        -webkit-transform: translateX(-1000px);
+        transform: translateX(-1000px);
+opacity: 0;
+    }
+  }
+  @keyframes slide-out-left {
+    0% {
+      
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+        opacity: 1;
+    }
+    100% {
+        -webkit-transform: translateX(-1000px);
+        transform: translateX(-1000px);
+        opacity: 0;
+    }
+  }
+
+ @-webkit-keyframes fade-in {
+    0% {
+        
+        background-color: transparent;
+      }
+      100% {
+        
+        background-color: black;
+      }
+  }
+  @keyframes fade-in {
+    0% {
+      
+      background-color: transparent;
+    }
+    100% {
+      
+      background-color: black;
+    }
+  }
+
+  @-webkit-keyframes fade-out {
+    0% {
+        background-color: black;
+        
+      }
+      100% {
+        background-color: transparent;
+        
+      }
+  }
+  @keyframes fade-out {
+    0% {
+      background-color: black;
+      
+    }
+    100% {
+      background-color: transparent;
+      
+    }
+  }
+
+
+  

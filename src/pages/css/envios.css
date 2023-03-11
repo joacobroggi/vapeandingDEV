@@ -381,3 +381,26 @@ text-align: center;
     margin-top: 1%;
     margin-bottom: 3%;
 }
+
+@media (min-width: 330px) and (max-width: 576px) { 
+    .enviosCont {
+      display: none;
+    }
+    .breadCrumb {
+      margin-top: 4.5%;
+    }
+    .linkBreadcrumb {
+      font-size: 1.2rem;
+
+    }
+.comprarForm {
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 14%;
+}
+.labelComprar {
+  color: white;
+  font-family: var(--nerko);
+  font-size: 1.5rem;
+}
+}
