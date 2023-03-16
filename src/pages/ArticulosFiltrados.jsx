@@ -9,7 +9,7 @@ import HeaderM from "../components/HeaderM";
 import MobileProducto from "../components/MobileProducto";
 import './css/articulos.css';
 import Footer from "../components/Footer";
-
+import FooterM from "../components/FooterM";
 
 
 
@@ -89,7 +89,7 @@ const ArticulosFiltradosMarca = ()=> {
        <div className="productosM">
     {data && data.map(item=> <MobileProducto titulo={item.titulo} precio={item.precio} img={item.img} categorias={item.categorias} stock={item.enStock} desc={item.desc} key={item._id} id={item._id}/>)}
     </div>
-    
+    <FooterM></FooterM>
     </div>
     </div>
     )

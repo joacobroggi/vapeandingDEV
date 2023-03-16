@@ -37,9 +37,12 @@ const ordenSlice = createSlice({
         state.apartamento = '';
         state.telefono = '';
         state.hasOrdered = action.payload.hasOrdered;
+    },
+    hasOrdered: (state, action)=> {
+      state.hasOrdered = action.payload.hasOrdered;
     }
   },
 });
 
-export const { addOrden } = ordenSlice.actions;
+export const { addOrden, hasOrdered } = ordenSlice.actions;
 export default ordenSlice.reducer;

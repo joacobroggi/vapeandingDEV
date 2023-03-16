@@ -5,7 +5,12 @@
   background-position: center;
   background-size: cover;
 }
-
+.enviosContM {
+  display: none;
+}
+.comprarM {
+  display: none;
+}
 .enviosCont {
   height: 100%;
   display: flex;
@@ -340,6 +345,7 @@ margin-bottom: 10%;
   padding: 5% 5%;
   margin-left: 4%;
 text-align: center;
+
   border-top: 1px solid rgba(255, 255, 255, 0.9);
   border-left: 1px solid rgba(255, 255, 255, 0.5);
   border-right: 0px solid rgba(255, 255, 255, 0.5);
@@ -381,8 +387,29 @@ text-align: center;
     margin-top: 1%;
     margin-bottom: 3%;
 }
+.headerM {
+  display: none;
+}
 
-@media (min-width: 330px) and (max-width: 576px) { 
+@media (min-width: 330px) and (max-width: 576px) {
+  .enviosContM {
+    display: block;
+  } 
+  .headerM {
+    display:block;
+  }
+  .comprarM {
+    display: block;
+  }
+  .enviosMain {
+    height: 100%;
+  }
+  .comprarForm2 {
+    
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 20%;
+  }
     .enviosCont {
       display: none;
     }
@@ -403,4 +430,75 @@ text-align: center;
   font-family: var(--nerko);
   font-size: 1.5rem;
 }
+.botoneraEnvios {
+  width: 107%;
+}
+.volverEnvios {
+  width: 100%;
+}
+.titleEnviosM {
+  font-family: var(--nerko);
+  color: white;
+  font-weight: 400;
+  font-size: 1.8rem;
+}
+.opcionesDePago {
+  width: 100%;
+}
+.envioInfoCont {
+  width: 96%;
+  margin-bottom: 2%;
+}
+.h3ContactoInfo {
+  margin-right: 1%;
+}
+.enviosContM {
+  padding-top: 4%;
+}
+.cartelOrdenM {
+  width: 80%;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.2);
+  border-top: 1px solid rgba(255, 255, 255, 0.9);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  border-right: 0px solid rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+  padding: 4%;
+  margin: 0 auto;
+}
+.h2Orden {
+  font-size: 2.2rem;
+}
+.pOrden {
+  font-size: 1.3rem;
+}
+.pOrden2 {
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  font-family: var(--nerko);
+  color: white;
+}
+.pOrden22 {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-family: var(--nerko);
+  color: white;
+}
+.imgOrdenM {
+  width: 35%;
+}
+.ordenM {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.2);
+  border-top: 1px solid rgba(255, 255, 255, 0.9);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  border-right: 0px solid rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+  padding: 2%;
+  margin-top: 4%;
+  margin-bottom: 4%;
+}
+
 }

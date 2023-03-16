@@ -44,7 +44,7 @@ const Articulo = () => {
   return (
     <div>
       <div className="articuloDesk">
-        <Header carrito={true}></Header>
+        <Header carrito={true} hasOrdered={hasOrdered}></Header>
 
         {data && generico && (
           <div className="articuloBody">
@@ -153,6 +153,7 @@ const Articulo = () => {
             pitadas={data.puffs}
             tipo={data.tipoSabor}
             nicotina={data.nicotina}
+            hasOrdered={hasOrdered}
           />
           <FooterM />
         </div>
@@ -175,6 +176,7 @@ const Articulo = () => {
             nicotina={data.nicotina}
             tema="hungria"
             logo='logohungria.png'
+            hasOrdered={hasOrdered}
           />
           <FooterM />
         </div>
@@ -198,6 +200,7 @@ const Articulo = () => {
             nicotina={data.nicotina}
             tema="party"
             logo='logoparty.png'
+            hasOrdered={hasOrdered}
           />
           <FooterM />
         </div>

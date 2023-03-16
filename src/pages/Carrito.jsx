@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux';
 import "./css/carrito.css";
 import Header from "../components/Header";
 import HeaderM from "../components/HeaderM";
-
+import { useEffect } from "react";
 import CarritoItem from "../components/CarritoItem";
 import CarritoItemMobile from "../components/CarritoItemMobile";
 import { Link, useNavigate } from "react-router-dom";
@@ -21,7 +21,19 @@ const Carrito = () => {
   const [envio1, setEnvio1] = useState(false);
   const [envio2, setEnvio2] = useState(false);
   const [envio3, setEnvio3] = useState(false);
-  const [dropdownOp, setDropdownOp] = useState(false)
+  const [dropdownOp, setDropdownOp] = useState(false);
+  const hasOrdered = useSelector((state) => state.orden.hasOrdered);
+  const navigate = useNavigate();
+
+  const hasUserOrdered = () => {
+    if (hasOrdered) {
+      navigate('/pedidos')
+    }
+  }
+
+  useEffect(() => {
+    hasUserOrdered();
+  }, [hasOrdered]);
 
   const handleEnvio3 = () => {
     setEnvio3(true);
@@ -222,7 +234,7 @@ const Carrito = () => {
       <HeaderM></HeaderM>
 
         <div className={dropdownOp ? "dropCarritoMA" : "dropCarritoM"}>
-          <button className="opcionesEntregaMobile" onClick={dropdownOpciones}>Opciones de entrega</button>
+          <button className="opcionesEntregaMobile" onClick={dropdownOpciones}>{envioName}</button>
           <div className={dropdownOp ? 'dropdownEntrega' : 'hide'}>
             <div className={envio1 ? "opcionMA" : 'opcionM'} onClick={() => CheckEnvioInmediato()}>
               <h3 className="h3OpcionM">Entrega Inmediata ($490 adicionales)</h3>

@@ -16,7 +16,7 @@ const Header = (props) => {
             <h4 className='h4Header sobreEscabianding'><Link to='/about' style={{textDecoration: 'none', color: 'white'}}>SOBRE VAPEANDING</Link></h4>
             {props.noPedidos? '' : <h4 className='h4Header sobreEscabianding'><Link to='/pedidos' style={{textDecoration: 'none', color: 'white'}}>PEDIDOS</Link></h4>}
             {props.carrito && <div className="carritoDiv">
-            <Link to="/carrito">
+            <Link to={props.hasOrdered ? "/pedidos" : "/carrito"}>
             <FontAwesomeIcon icon={faCartShopping} style={{color: 'white', fontSize:'1.5rem'}}/>
             </Link>
             </div>}

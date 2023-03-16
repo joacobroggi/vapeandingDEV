@@ -91,7 +91,7 @@ const ArticuloM = (props)=> {
                         </div>
                     </div>
 
-                    <Link to='/carrito' onClick={handleClick} className="btnArticuloM" style={{textAlign:'center', textDecoration: 'none'}}>Agregar al carrito por {props.precio} </Link>
+                    {props.hasOrdered ? <Link to='/pedidos' onClick={handleClick} className="btnArticuloMR" style={{textAlign:'center', textDecoration: 'none'}}>YA REALIZASTE UN PEDIDO</Link> : <Link to='/carrito' onClick={handleClick} className="btnArticuloM" style={{textAlign:'center', textDecoration: 'none'}}>Agregar al carrito por {props.precio} </Link>}
 
 
                 </div>

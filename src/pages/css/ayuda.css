@@ -1,0 +1,105 @@
+.ayudaMain {
+    height: 100vh;
+    background: url('../../img/fondoAzul.jpg');
+    background-position: center;
+    background-size: cover;
+}
+.ayudaH2 {
+    font-family: var(--nerko);
+    font-weight: 400;
+    color: white;
+    font-size: 4rem;
+    text-align: center;
+    padding-top: 8%;
+}
+.contAyuda {
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+.dropdwonAyuda {
+    margin-bottom: 2%;
+    width: 80%;
+    background-color: antiquewhite;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%), rgba(255, 255, 255, 0.3);
+    border-top: 1.5px solid rgba(255, 255, 255, 0.9);
+    border-left: 1.5px solid rgba(255, 255, 255, 0.5);
+    border-right: 1px solid rgba(255, 255, 255, 0.5);
+    padding: 2%;
+    border-radius: 20px;
+}
+.ayudaDesplegado {
+    display: block;
+}
+.h4Ayuda {
+    color: white;
+    font-family: var(--nerko);
+    font-weight: 400;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+.ayudaTitle {
+    display: flex;
+    justify-content: space-between;
+}
+.iconAyuda {
+    font-size: 1.8rem;
+    color: white;
+}
+.pAyuda {
+    color: white;
+    font-family: var(--nerko);
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+.ayudaDesplegado {
+    margin-left: 2%;
+}
+.liAyuda {
+    color: white;
+    font-family: var(--nerko);
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+.ulAyuda {
+    list-style:circle;
+    margin-left: 2%;
+}
+.iconAyuda:hover {
+    cursor: pointer;
+}
+
+@media (max-width: 576px) { 
+.ayudaH2 {
+    font-size: 2.2rem;
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-top: 15%;
+    padding-bottom: 5%;
+}
+.dropdwonAyuda {
+    width: 95%;
+    margin-bottom: 4%;
+}
+.liAyuda {
+    font-size: 1.1rem;
+    margin-left: 4%;
+}
+.pAyuda {
+    margin-left: 1%;
+}
+
+.h4Ayuda {
+    font-size: 1.2rem;
+}
+}
+
+
+
+
+

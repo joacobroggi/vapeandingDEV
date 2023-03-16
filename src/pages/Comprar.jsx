@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import "./css/envios.css";
 import Footer from "../components/Footer";
+import FooterM from "../components/FooterM";
 import { Link, useNavigate, Navigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretDown, faChevronLeft } from "@fortawesome/free-solid-svg-icons";
@@ -15,7 +16,7 @@ const Comprar = () => {
   const envio = useSelector((state) => state.cart.envio);
   const carrito = useSelector((state) => state.cart);
   const usuario = useSelector((state) => state.user.currentUser);
-  const hasOrdered = useSelector((state) => state.orden.hasOrdered)
+  const hasOrdered = useSelector((state) => state.orden.hasOrdered);
   const navigate = useNavigate();
 
   const [telefono, setTelefono] = useState(0);
@@ -77,6 +78,8 @@ const continuar = (e)=> {
         </span>
         <Link className="linkBreadcrumbActive">Envio</Link>
       </div>
+
+{/* DESK */}
       <div className="enviosCont">
         <div className="izquierdaEnvios">
           <h3 className="titleEnvios">Datos de envio:</h3>
@@ -189,10 +192,24 @@ const continuar = (e)=> {
           </div>
         </div>
       </div>
-
+{/* MOBILE */}
       <div className="comprarM">
-      <div className="comprarForm">
-      <label className="labelComprar">Dirección:</label>
+
+      <div className="comprarForm2">
+      <h2 className="titleEnviosM">DATOS DE ENVIO:</h2>
+      <label className="labelComprar">Nombre:</label>
+        <input
+          type="text"
+          placeholder="Julian"
+          className='inputIniciar'
+        />
+        <label className="labelComprar">Apellido:</label>
+        <input
+          type="text"
+          placeholder="Alvarez"
+          className='inputIniciar'
+        />
+        <label className="labelComprar">Direccion:</label>
         <input
           type="text"
           placeholder="Cordoba 1234"
@@ -214,9 +231,24 @@ const continuar = (e)=> {
           onChange={(e) => setTelefono(e.target.value)}
           className='inputIniciar'
         />
+<div className="botoneraEnvios">
+            <Link to="/carrito" className="volverEnvios">
+              <FontAwesomeIcon
+                icon={faChevronLeft}
+                className="chevronEnvios"
+              ></FontAwesomeIcon>{" "}
+              Volver al carrito
+            </Link>
+            <Link to="pago" className="continuarEnvios"
+            onClick={(e)=> continuar(e)}>
+              Continuar
+            </Link>
+          </div>
+        
       </div>
       </div>
       <Footer></Footer>
+      <FooterM></FooterM>
     </div>
   );
 };

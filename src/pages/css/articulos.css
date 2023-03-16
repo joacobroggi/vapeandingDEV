@@ -122,6 +122,9 @@ ul {
     }
     .filtrosM {
         background: linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%), rgba(255, 255, 255, 0.3);
+        border-top: 1.5px solid rgba(255, 255, 255, 0.9);
+        border-left: 1.5px solid rgba(255, 255, 255, 0.5);
+        border-right: 1.5px solid rgba(255, 255, 255, 0.5);
         display: flex;
         flex-wrap: wrap;
         width: 85%;

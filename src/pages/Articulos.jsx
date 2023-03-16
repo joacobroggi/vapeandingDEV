@@ -4,6 +4,7 @@ import { publicRequest } from "../requestMethods";
 import Header from '../components/Header';
 import HeaderM from '../components/HeaderM';
 import Footer from "../components/Footer";
+import FooterM from "../components/FooterM";
 import './css/articulos.css'
 import MobileProducto from '../components/MobileProducto';
 import { Link } from "react-router-dom";
@@ -89,7 +90,7 @@ const Articulos = ()=> {
            
 
         <div className="productos">
-        {data && data.map(item=> <Producto titulo={item.titulo} precio={item.precio} img={item.img2} categorias={item.categorias} stock={item.enStock} desc={item.desc} key={item._id} id={item._id}/>)}
+        {data && data.map(item=> <Producto titulo={item.titulo} precio={item.precio} img={item.img2} categorias={item.categorias} stock={item.stock} desc={item.desc} key={item._id} id={item._id}/>)}
         </div>
 <br />
 <br />
@@ -133,9 +134,10 @@ const Articulos = ()=> {
 
 
            <div className="productosM">
-        {data && data.map(item=> <MobileProducto titulo={item.titulo} precio={item.precio} img={item.img} categorias={item.categorias} stock={item.enStock} desc={item.desc} key={item._id} id={item._id}/>)}
-        </div>
+        {data && data.map(item=> <MobileProducto titulo={item.titulo} precio={item.precio} img={item.img} categorias={item.categorias} stock={item.stock} desc={item.desc} key={item._id} id={item._id}/>)}
         
+        </div>
+        <FooterM></FooterM>
         </div>
         </div>
     )

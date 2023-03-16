@@ -3,6 +3,7 @@ import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
 import "./css/envios.css";
 import Footer from "../components/Footer";
+import FooterM from "../components/FooterM";
 import { Link, useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretDown, faChevronLeft } from "@fortawesome/free-solid-svg-icons";
@@ -309,7 +310,134 @@ const Pago = () => {
           </div>
         </div>
       </div>
+
+
+      
+      <div className="comprarM">
+
+<div className="comprarForm2">
+<div className="envioInfoCont">
+            <div className="envioInfo">
+              <h3 className="h3ContactoInfo">
+                <span style={{ textTransform: "uppercase" }}>Contacto: </span>
+                {orden.telefono}
+              </h3>
+              <Link className="linkContactoEnvio" to="/checkout">
+                Cambiar
+              </Link>
+            </div>
+            <hr className="hr" />
+            <div className="envioInfo">
+              <h3 className="h3ContactoInfo">
+                <span style={{ textTransform: "uppercase" }}>Enviar a: </span>
+                {orden.direccion}
+              </h3>
+              <Link className="linkContactoEnvio" to="/checkout">
+                Cambiar
+              </Link>
+            </div>
+            <hr className="hr" />
+            <div className="envioInfo">
+              <h3 className="h3ContactoInfo">
+                <span style={{ textTransform: "uppercase" }}>
+                  Apartamento:{" "}
+                </span>{" "}
+                {(() => {
+                  switch (orden.apartamento) {
+                    case "":
+                      return "Casa";
+                    default:
+                      return orden.apartamento;
+                  }
+                })()}
+              </h3>
+              <Link className="linkContactoEnvio" to="/checkout">
+                Cambiar
+              </Link>
+            </div>
+            <hr className="hr" />
+            <div className="envioInfo">
+              <h3 className="h3ContactoInfo">
+                <span style={{ textTransform: "uppercase" }}>Producutos: </span>
+                {}
+              </h3>
+              <Link className="linkContactoEnvio" to="/checkout">
+                Cambiar
+              </Link>
+            </div>
+          </div>
+<h2 className="titleEnviosM">FORMA DE PAGO:</h2>
+
+<div className="opcionesDePago">
+            <div className="opcionPago">
+              <button
+                className={
+                  efectivo ? "opcionPagoButtonActive" : "opcionPagoButton"
+                }
+                onClick={handleEfectivo}
+              ></button>
+              <h3 className="h3Pagos">Contraentrega efectivo</h3>
+            </div>
+            <div className={efectivo ? "pagoDesc" : "hide"}>
+              <p className="descPago">
+                Abonas al momento que llega tu pedido a la puerta de tu casa en
+                EFECTIVO.
+              </p>
+            </div>
+
+            <div className="opcionPago">
+              <button
+                className={
+                  transferencia ? "opcionPagoButtonActive" : "opcionPagoButton"
+                }
+                onClick={handleTransferencia}
+              ></button>
+              <h3 className="h3Pagos">Transferencia Bancaria</h3>
+            </div>
+            <div className={transferencia ? "pagoDesc" : "hide"}>
+              <p className="descPago">
+                Abonas al momento que llega tu pedido a la puerta de tu casa en
+                EFECTIVO.
+              </p>
+            </div>
+
+            <div className="opcionPago">
+              <button
+                className={
+                  criptomoneda ? "opcionPagoButtonActive" : "opcionPagoButton"
+                }
+                onClick={handleCriptomoneda}
+              ></button>
+              <h3 className="h3Pagos">Criptomonedas</h3>
+            </div>
+            <div className={criptomoneda ? "pagoDesc" : "hide"}>
+              <p className="descPago">
+                Abonas al momento que llega tu pedido a la puerta de tu casa en
+                EFECTIVO.
+              </p>
+            </div>
+          </div>
+  
+<div className="botoneraEnvios">
+      <Link to="/carrito" className="volverEnvios">
+        <FontAwesomeIcon
+          icon={faChevronLeft}
+          className="chevronEnvios"
+        ></FontAwesomeIcon>{" "}
+        Volver al carrito
+      </Link>
+      <Link to="pago" className="continuarEnvios"
+      onClick={(e) => handleClick(e)}>
+        Continuar
+      </Link>
+    </div>
+  
+</div>
+</div>
+
+
       <Footer></Footer>
+      <FooterM></FooterM>
       {finalizado && <Navigate to='/pedidos'/>}
     </div>
   );

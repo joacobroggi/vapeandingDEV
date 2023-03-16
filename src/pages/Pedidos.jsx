@@ -1,22 +1,27 @@
 import { useState, useEffect } from "react";
-import axios from "axios";
+import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import "./css/envios.css";
+import HeaderM from "../components/HeaderM";
 import Header from "../components/Header";
+import FooterM from "../components/FooterM";
 import { publicRequest } from "../requestMethods";
+import { addOrden } from "../redux/ordenReducer";
 
 const Pedidos = () => {
-  const dispatch = useDispatch();
+  const hasOrdered = useSelector((state) => state.orden.hasOrdered);
   const envio = useSelector((state) => state.cart.envio);
   const carrito = useSelector((state) => state.cart);
   const orden = useSelector((state) => state.orden);
   const usuario = useSelector((state) => state.user.currentUser);
 
-  const [data, setData] = useState(null);
 
-  const handleClick = (e) => {
-    alert("sexologia");
-  };
+  const [data, setData] = useState([]);
+
+  
+
+  const dispatch = useDispatch();
+  
 
   useEffect(() => {
     publicRequest
@@ -27,27 +32,75 @@ const Pedidos = () => {
       })
       .then((res) => {
         setData(res.data);
-        
+        if (data.length === 0) {
+          console.log("china is the devil");
+          dispatch(
+            addOrden({
+              total: '',
+              productos: '',
+              envio: '',
+              pago: '',
+              direccion: '',
+              apartamento: '',
+              telefono: '',
+              nombre: '',
+              userId: '',
+              hasOrdered: false,
+            })
+          );
+        } else if (data === null) {
+          console.log("china is the devil");
+          dispatch(
+            addOrden({
+              total: '',
+              productos: '',
+              envio: '',
+              pago: '',
+              direccion: '',
+              apartamento: '',
+              telefono: '',
+              nombre: '',
+              userId: '',
+              hasOrdered: false,
+            })
+          );
+        } else {
+          dispatch(addOrden({
+            hasOrdered: true,
+          }))
+        }
         console.log(data);
-      });
-  }, []);
+      })
+      
+  }, [data]);
+
+ 
 
   return (
     <div className="enviosMain">
      <Header noPedidos={true}></Header>
+     <HeaderM></HeaderM>
 
       {data && (
         <div className="enviosCont">
           <div className="izquierdaEnvios">
            <div className="cartelContainer">
-           <div className="cartelOrden">
+           {hasOrdered ? <div className="cartelOrden">
               <h2 className="h2Orden">¡Tu orden fue realizada con éxito!</h2>
               <hr className="hrEnvios2"/>
               <p className="pOrden">
                 Ya estas cada vez más cerca de tu vaper {usuario.nombre}. Te
                 mandamos el recibo por email a {usuario.email}
               </p>
+            </div> : <div>
+            <div className="cartelOrden">
+              <h2 className="h2Orden">No realizaste ninguna orden</h2>
+              <hr className="hrEnvios2"/>
+              <p className="pOrden">
+                Elegí tu próximo vaper en la sección <Link to='/comprar'>comprar</Link> o compra tus articulos seleccionados en <Link to='/carrito'>carrito</Link>
+              </p>
             </div>
+              </div>}
             
            </div>
 
@@ -105,6 +158,49 @@ const Pedidos = () => {
               </div>
             ))}
           </div>
+        </div>
+      )}
+
+
+      {data && (
+        <div className="enviosContM">
+            <div className="cartelContainer">
+           {hasOrdered ? <div className="cartelOrdenM">
+              <h2 className="h2Orden">¡Tu orden fue realizada con éxito!</h2>
+              <hr className="hrEnvios2"/>
+              {data.map((orden) => (
+                orden.productos.map((prod) => (
+                 <div className="ordenM">
+                  <img src={require("../img/" + prod.img)} alt="" className="imgOrdenM"/>
+                 <div className="subOrdenM">
+                 <p className="pOrden2">{prod.titulo}</p>
+                 <p className="pOrden22 ">${prod.precio}</p>
+                 </div>
+                 </div>
+                ))
+              ))}
+              <hr className="hrEnvios2"/>
+              <p className="pOrden">
+                Ya estas cada vez más cerca de tu vaper {usuario.nombre}. Te
+                mandamos el recibo por email a {usuario.email}
+              </p>
+              
+             
+             
+              
+            </div> : <div>
+            <div className="cartelOrden">
+              <h2 className="h2Orden">No realizaste ninguna orden</h2>
+              <hr className="hrEnvios2"/>
+              <p className="pOrden">
+                Elegí tu próximo vaper en la sección <Link to='/comprar'>comprar</Link> o compra tus articulos seleccionados en <Link to='/carrito'>carrito</Link>
+              </p>
+              
+            </div>
+              </div>}
+            
+           </div>
+           <FooterM></FooterM>
         </div>
       )}
     </div>

@@ -5,6 +5,7 @@ import { useState } from 'react';
 import {addProducto} from '../redux/cartRedux'
 import { useEffect } from 'react';
 import { publicRequest } from '../requestMethods';
+import { Link } from 'react-router-dom';
 
 
 
@@ -90,7 +91,7 @@ const ArticuloUniqueMobile = (props)=> {
                         </div>
                     </div>
 
-                    <button onClick={handleClick} className={"btnArticuloM" + props.tema}>Agregar al carrito por {props.precio} </button>
+                   {props.hasOrdered ?  <Link to='pedidos' onClick={handleClick} className="btnArticuloMR" style={{textDecoration: 'none', textAlign: 'center'}}>YA REALIZASTE UN PEDIDO</Link> :  <Link to='/carrito' onClick={handleClick} className={"btnArticuloM" + props.tema} style={{textDecoration: 'none', textAlign: 'center'}}>Agregar al carrito por {props.precio} </Link>}
 
 
                 </div>

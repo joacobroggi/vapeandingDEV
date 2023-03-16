@@ -39,10 +39,10 @@ const Home = () => {
         <div className="home3">
           <FontAwesomeIcon icon={faCloud} className='iconHome3'></FontAwesomeIcon>
           <h2 className="home3Title">
-            Estamos revolucionando el vaping rosarino
+            revolucionando el vaping rosarino
           </h2>
           <p className="home3p">
-          Nuestra página es la mejor opción para conseguir tu vaper, con envios en solo MINUTOS, precios accesibles y solo productos originales.
+          Vapearg es la revolución de los vapers ¿Por qué conformarse con esperar días por tus productos cuando podés disfrutar de <b style={{fontWeight: 400, textDecoration:'underline'}}>envío inmediato</b> en Rosario? Vapea como se debe con Vapearg.
           </p>
           <Link to='/about' className='home3LinkBtn'>Conocé vapearg</Link>
         </div>
@@ -66,6 +66,9 @@ const Home = () => {
         </div>
 
         <div className={swipe1 ? "home2M" : 'hide'}>
+        <Link to='/filtros/marca/Zomo' className="home2Izq">
+          
+          </Link>
           <div className="botoneraH2M">
             <span className="dot1"></span>
             <span className="dot2" onClick={goToSwiper2}></span>
@@ -73,7 +76,9 @@ const Home = () => {
         </div>
         <div className={swipe2 ? "home2M2" : 'hide'}>
           
+        <Link to='/filtros/marca/Zomo' className="home2Izq">
           
+          </Link>
           <div className="botoneraH2M">
             <span className="dot2" onClick={goToSwiper1}></span>
             <span className="dot1"></span>
@@ -84,7 +89,7 @@ const Home = () => {
           <div className="txtHome3M">
             <h3 className="h3home3M">ESTAMOS REVOLUCIONANDO EL VAPING ROSARINO</h3>
             <p className="phome3M">Nuestra página es la mejor opción para conseguir tu vaper, con envios en solo MINUTOS, precios accesibles y solo productos originales.</p>
-            <Link className="lhome3M">CONOCENOS</Link>
+            <Link to='/about' className="lhome3M">CONOCENOS</Link>
           </div>
         </div>
 
