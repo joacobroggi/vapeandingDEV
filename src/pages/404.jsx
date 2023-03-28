@@ -16,7 +16,7 @@ const P404 = () => {
             <Link href="" className="a404">Ayuda</Link>
             </div>
             <Footer></Footer>
-            <FooterM></FooterM>
+            
         </div>
     )
 }

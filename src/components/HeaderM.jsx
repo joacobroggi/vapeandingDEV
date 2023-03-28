@@ -24,7 +24,7 @@ const Header = (props) => {
           className="hamburgerM"
           onClick={dropMenu}
         ></FontAwesomeIcon>
-        {!props.registro && <Link to="/" style={{ textDecoration: "none" }} className="h3HeaderM">
+        {!props.registro && !props.login && <Link to="/" style={{ textDecoration: "none" }} className="h3HeaderM">
           <FontAwesomeIcon icon={faCloud} />
         </Link>}
         {props.carrito && <Link to="/carrito">
@@ -35,6 +35,9 @@ const Header = (props) => {
         </Link>}
         {props.registro && <Link to="/registro" className="itemDropdwon">
           CREAR CUENTA
+        </Link>}
+        {props.login && <Link to="/login" className="itemDropdwon">
+          INICIAR SESIÓN
         </Link>}
       </div>
 

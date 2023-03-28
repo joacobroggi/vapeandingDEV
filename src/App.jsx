@@ -20,16 +20,12 @@ import ArticulosFiltradosMarca from "./pages/ArticulosFiltrados";
 import ArticulosFiltradosPuffs from "./pages/ArticulosFiltradosPuffs";
 import Pedidos from "./pages/Pedidos.jsx";
 import ArticulosFiltradostipoSabor from "./pages/ArticulosFiltradostipoSabor";
-
-import { useState, useEffect } from "react";
-import { useDispatch } from "react-redux";
-import { publicRequest } from "./requestMethods";
-import { addOrden } from "./redux/ordenReducer";
 import Ayuda from "./pages/Ayuda";
+import Transferencia from "./pages/Transferencia";
+import ArticulosFiltradosModelo from "./pages/ArticulosFiltradosModelo";
 
 function App() {
   const usuario = useSelector((state) => state.user.currentUser);
- 
 
   return (
     <Router>
@@ -42,8 +38,6 @@ function App() {
         ></Route>
 
         <Route path="/comprar" element={<Articulos />}></Route>
-
-        <Route path="/about" element={<About />}></Route>
 
         <Route
           path="/filtros/marca/:marca"
@@ -59,6 +53,11 @@ function App() {
           element={<ArticulosFiltradosPuffs />}
         ></Route>
 
+<Route
+          path="/filtros/modelo/:modelo"
+          element={<ArticulosFiltradosModelo />}
+        ></Route>
+
         <Route path="/comprar/:id" element={<Articulo />}></Route>
 
         <Route
@@ -70,14 +69,17 @@ function App() {
           element={usuario ? <Pago /> : <Login />}
         ></Route>
         <Route
+          path="/checkout/pago/transferencia"
+          element={usuario ? <Transferencia /> : <Login />}
+        ></Route>
+        <Route
           path="/pedidos"
           element={usuario ? <Pedidos /> : <Login />}
         ></Route>
 
-<Route
-          path="/ayuda"
-          element={<Ayuda></Ayuda>}
-        ></Route>
+        <Route path="/ayuda" element={<Ayuda></Ayuda>}></Route>
+
+        <Route path="/about" element={<About></About>}></Route>
 
         <Route
           path="/login"
@@ -91,6 +93,9 @@ function App() {
 
         <Route path="*" element={<P404 />} />
       </Routes>
+
+
+      
     </Router>
   );
 }

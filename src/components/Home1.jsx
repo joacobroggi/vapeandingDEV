@@ -2,6 +2,7 @@ import Header from "../components/Header";
 import { Link } from 'react-router-dom';
 
 const Home1 = ()=> {
+   
     return (
         <div className='homeBody'>
            <Header carrito={true}></Header>
@@ -10,6 +11,7 @@ const Home1 = ()=> {
                 <p className="banner1P">
                 Disfrutá del vapeo al instante con Vapearg. Envío inmediato en Rosario.
                 <br />
+            
                    
                 </p>
             </div>

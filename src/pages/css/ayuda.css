@@ -1,5 +1,5 @@
 .ayudaMain {
-    height: 100vh;
+    min-height: 100vh;
     background: url('../../img/fondoAzul.jpg');
     background-position: center;
     background-size: cover;
@@ -16,16 +16,34 @@
     width: 90%;
     margin: 0 auto;
     padding-top: 2%;
+    padding-bottom: 2%;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    flex-direction: row;
     
+    justify-content: space-around;
+    flex-wrap: wrap;
+   
+}
+.mainContA {
+    height: 100vh;
 }
 .dropdwonAyuda {
     margin-bottom: 2%;
-    width: 80%;
+    width: 40vw;
+    height: 6vh;
     background-color: antiquewhite;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%), rgba(255, 255, 255, 0.3);
+    border-top: 1.5px solid rgba(255, 255, 255, 0.9);
+    border-left: 1.5px solid rgba(255, 255, 255, 0.5);
+    border-right: 1px solid rgba(255, 255, 255, 0.5);
+    padding: 2%;
+    border-radius: 20px;
+}
+.dropdwonAyudaA {
+    margin-bottom: 2%;
+    width: 40vw;
+    min-height: 6vh;
+   
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%), rgba(255, 255, 255, 0.3);
     border-top: 1.5px solid rgba(255, 255, 255, 0.9);
     border-left: 1.5px solid rgba(255, 255, 255, 0.5);
@@ -56,9 +74,11 @@
     font-family: var(--nerko);
     font-size: 1.1rem;
     font-weight: 400;
+    width: 90%;
 }
 .ayudaDesplegado {
     margin-left: 2%;
+
 }
 .liAyuda {
     color: white;
@@ -75,6 +95,17 @@
 }
 
 @media (max-width: 576px) { 
+    .contAyuda {
+        width: 90%;
+        margin: 0 auto;
+        padding-top: 2%;
+        padding-bottom: 2%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+    }
 .ayudaH2 {
     font-size: 2.2rem;
     padding-left: 2%;
@@ -85,6 +116,8 @@
 .dropdwonAyuda {
     width: 95%;
     margin-bottom: 4%;
+    min-height: auto;
+   
 }
 .liAyuda {
     font-size: 1.1rem;
@@ -103,3 +136,128 @@
 
 
 
+.tracking-in-expand {
+	-webkit-animation: tracking-in-expand 0.5s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+	        animation: tracking-in-expand 0.5s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+.tracking-out-contract {
+	-webkit-animation: tracking-out-contract 0.7s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+	        animation: tracking-out-contract 0.7s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+.jello-horizontal {
+	-webkit-animation: jello-horizontal 0.9s both;
+	        animation: jello-horizontal 0.9s both;
+}
+.out {
+	-webkit-animation: out 5s both;
+	        animation: out 5s both;
+            
+            animation-delay: 2s;         
+}
+
+
+@-webkit-keyframes out {
+    0% {
+      
+      opacity: 0.8;
+    }
+    40% {
+      opacity: 0.9;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes out {
+    0% {
+      
+        opacity: 0.8;
+      }
+      40% {
+        opacity: 0.9;
+      }
+      100% {
+        opacity: 1;
+      }
+  }
+  
+
+
+ @-webkit-keyframes tracking-in-expand {
+    0% {
+      letter-spacing: -0.5em;
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes tracking-in-expand {
+    0% {
+      letter-spacing: -0.5em;
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+
+@-webkit-keyframes tracking-out-contract {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+}
+@keyframes tracking-out-contract {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+}
+
+
+@media (min-width: 150px) and (max-width: 576px) {
+  .mainContA {
+      height: inherit;
+   
+  }
+  .contAyuda {
+    height: inherit;
+    flex-wrap: nowrap;
+  }
+  .dropdwonAyudaA {
+    width: 95%;
+    min-height: inherit;
+    margin-bottom: 4%;
+  }
+  .ayudaMain {
+    min-height: calc(var(--vh, 1vh) * 100);
+    display: flex;
+    flex-direction: column;
+  }
+ .footerM {
+  margin-top: auto;
+  margin-bottom: 0;
+
+  
+ }
+}

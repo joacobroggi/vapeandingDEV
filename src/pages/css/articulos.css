@@ -66,6 +66,10 @@
     text-decoration: none;
     font-family: var(--nerko);
     font-size: 1.7rem;
+    opacity: 90%;
+}
+.filtroP:hover {
+opacity: 100%;
 }
 .logoMarca {
     height: 25vh;
@@ -89,6 +93,7 @@ ul {
 }
 
 
+
 @media (max-width: 576px) { 
     .articulosDesk {
         display: none;
@@ -98,7 +103,7 @@ ul {
         background: url('../../img/fondoAzul.jpg');
         background-size: cover;
         background-position: center;
-        height: 100%;
+        min-height: calc(var(--vh, 1vh) * 100);
         margin: 0 0;
        
     }
@@ -149,4 +154,9 @@ ul {
         text-transform: capitalize;
     }
 
+ }
+
+
+ @media (max-width: 360px) {
+    
  }

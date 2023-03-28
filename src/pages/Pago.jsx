@@ -6,7 +6,7 @@ import Footer from "../components/Footer";
 import FooterM from "../components/FooterM";
 import { Link, useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCaretDown, faChevronLeft } from "@fortawesome/free-solid-svg-icons";
+import { faCaretDown, faChevronLeft, faHouseMedicalCircleExclamation } from "@fortawesome/free-solid-svg-icons";
 import { Navigate } from "react-router-dom";
 import { addOrden } from "../redux/ordenReducer";
 
@@ -19,7 +19,8 @@ const Pago = () => {
   const [transferencia, setTransferencia] = useState(false);
   const [efectivo, setEfectivo] = useState(true);
   const [criptomoneda, setCriptomoneda] = useState(false);
-  const [finalizado, setFinalizado] = useState(false)
+  const [finalizado, setFinalizado] = useState(false);
+  const [finalizarTransfe, setFinalizarTransfe] = useState(false);
 
   const handleEfectivo = () => {
     setEfectivo((current) => !current);
@@ -36,10 +37,9 @@ const Pago = () => {
   const handleCriptomoneda = () => {
     
     setEfectivo(false);
-    setCriptomoneda((current) => !current);
+ 
     setTransferencia(false);
   };
-  const navigate = useNavigate();
   const handleClick = (e)=> {
       e.preventDefault();
       let pago;
@@ -59,7 +59,7 @@ const Pago = () => {
           hasOrdered: true
         }
         console.log(objeto);
-        axios.post('http://localhost:7000/api/compras/', objeto)
+        axios.post('https://vapearg.onrender.com/api/compras/', objeto)
             .then((res)=>{
                 console.log(res);
                 dispatch(
@@ -85,19 +85,12 @@ const Pago = () => {
         }
 
 
-        axios.post('http://localhost:7000/api/compras/', objeto, {
-          headers: {
-            'token': `Bearer ${usuario.tokenAcceso}`
-            }
-        })
-            .then((res)=>{
-                console.log(res);
-                dispatch(
-                  addOrden(objeto)
-                )
-                setFinalizado(true);
-            })
+        
 
+        dispatch(
+                    addOrden(objeto)
+                  )
+        setFinalizarTransfe(true);
       } else if (criptomoneda) {
         pago = 'criptomoneda'
         objeto = {
@@ -113,7 +106,7 @@ const Pago = () => {
         }
 
 
-        axios.post('http://localhost:7000/api/compras/', objeto, {
+        axios.post('https://vapearg.onrender.com/api/compras/', objeto, {
           headers: {
             'token': `Bearer ${usuario.tokenAcceso}`
             }
@@ -130,29 +123,12 @@ const Pago = () => {
       } else {
         alert('Seleccione un metodo de pago');
       }
-  }
+  };
 
   return (
     <div className="enviosMain">
       <div className="breadCrumb">
-      <Link to="/" className="linkBreadcrumb">
-          Home
-        </Link>
-        <span className="separadorBreadCrumb">
-          <FontAwesomeIcon icon={faChevronLeft}></FontAwesomeIcon>
-        </span>
-        <Link to="/comprar" className="linkBreadcrumb">
-          Comprar
-        </Link>
-        <span className="separadorBreadCrumb">
-          <FontAwesomeIcon icon={faChevronLeft}></FontAwesomeIcon>
-        </span>
-        <Link to="/carrito" className="linkBreadcrumb">
-          Carrito
-        </Link>
-        <span className="separadorBreadCrumb">
-          <FontAwesomeIcon icon={faChevronLeft}></FontAwesomeIcon>
-        </span>
+      
         <Link className="linkBreadcrumb">Envio</Link>
         <span className="separadorBreadCrumb">
           <FontAwesomeIcon icon={faChevronLeft}></FontAwesomeIcon>
@@ -233,19 +209,18 @@ const Pago = () => {
             </div>
             <div className={transferencia ? "pagoDesc" : "hide"}>
               <p className="descPago">
-                Abonas al momento que llega tu pedido a la puerta de tu casa en
-                EFECTIVO.
+                Abonas por medio de una transferencia bancaria. Una vez que hayamos procesado el pago, confirmaremos tu pedido.
               </p>
             </div>
 
             <div className="opcionPago">
               <button
                 className={
-                  criptomoneda ? "opcionPagoButtonActive" : "opcionPagoButton"
+                  criptomoneda ? "opcionPagoButtonActive" : "opcionPagoButtonP"
                 }
                 onClick={handleCriptomoneda}
               ></button>
-              <h3 className="h3Pagos">Criptomonedas</h3>
+              <h3 className="h3Pagos">Tarjeta de debito (PROXIMAMENTE)</h3>
             </div>
             <div className={criptomoneda ? "pagoDesc" : "hide"}>
               <p className="descPago">
@@ -264,7 +239,7 @@ const Pago = () => {
               Volver al carrito
             </Link>
             <Link onClick={(e) => handleClick(e)} className="continuarEnvios">
-              Continuar
+              Terminar
             </Link>
           </div>
         </div>
@@ -315,8 +290,8 @@ const Pago = () => {
       
       <div className="comprarM">
 
-<div className="comprarForm2">
-<div className="envioInfoCont">
+<div className="comprarForm3">
+<div className="envioInfoCont2">
             <div className="envioInfo">
               <h3 className="h3ContactoInfo">
                 <span style={{ textTransform: "uppercase" }}>Contacto: </span>
@@ -355,17 +330,9 @@ const Pago = () => {
                 Cambiar
               </Link>
             </div>
-            <hr className="hr" />
-            <div className="envioInfo">
-              <h3 className="h3ContactoInfo">
-                <span style={{ textTransform: "uppercase" }}>Producutos: </span>
-                {}
-              </h3>
-              <Link className="linkContactoEnvio" to="/checkout">
-                Cambiar
-              </Link>
-            </div>
+            
           </div>
+<div>
 <h2 className="titleEnviosM">FORMA DE PAGO:</h2>
 
 <div className="opcionesDePago">
@@ -384,6 +351,7 @@ const Pago = () => {
                 EFECTIVO.
               </p>
             </div>
+            
 
             <div className="opcionPago">
               <button
@@ -403,20 +371,14 @@ const Pago = () => {
 
             <div className="opcionPago">
               <button
-                className={
-                  criptomoneda ? "opcionPagoButtonActive" : "opcionPagoButton"
-                }
-                onClick={handleCriptomoneda}
+                className='opcionPagoButtonP'
+                
               ></button>
-              <h3 className="h3Pagos">Criptomonedas</h3>
+              <h3 className="h3Pagos">Tarjeta de Debito</h3>
             </div>
-            <div className={criptomoneda ? "pagoDesc" : "hide"}>
-              <p className="descPago">
-                Abonas al momento que llega tu pedido a la puerta de tu casa en
-                EFECTIVO.
-              </p>
-            </div>
+            
           </div>
+</div>
   
 <div className="botoneraEnvios">
       <Link to="/carrito" className="volverEnvios">
@@ -437,8 +399,9 @@ const Pago = () => {
 
 
       <Footer></Footer>
-      <FooterM></FooterM>
+     
       {finalizado && <Navigate to='/pedidos'/>}
+      {finalizarTransfe && <Navigate to='transferencia' />}
     </div>
   );
 };

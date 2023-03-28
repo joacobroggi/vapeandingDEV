@@ -18,10 +18,11 @@
 .removeButton:hover {
     cursor: pointer;
     opacity: 100%;
+    background-color: transparent;
 }
 .itemContainerC {
     background: rgba(255, 255, 255, 0.3);
-    backdrop-filter: blur(2px);
+    
     width: 95%;
     display: flex;
     border-radius: 20px;

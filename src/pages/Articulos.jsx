@@ -41,9 +41,7 @@ const Articulos = ()=> {
                     <li>
                         <Link to='/filtros/marca/Fume' className='filtroP'>Fume</Link>                        
                     </li>
-                    <li>
-                    <Link to='/filtros/marca/Ignite' className='filtroP'>Ignite</Link>                         
-                    </li>
+                   
                     <li>
                     <Link to='/filtros/marca/Zomo' className='filtroP'>Zomo</Link>                       
                     </li>
@@ -66,20 +64,20 @@ const Articulos = ()=> {
                     <Link to='/filtros/tipoSabor/frutal' className='filtroP'>Frutal</Link> 
                     </li>
                     <li>
-                        <p className='filtroP'>Tabaco</p>                        
+                    <Link to='/filtros/tipoSabor/tabaco' className='filtroP'>Tabaco</Link>                        
                     </li>
                     <li>
-                        <p className='filtroP'>Mentolado</p>                        
+                    <Link to='/filtros/tipoSabor/mentolado' className='filtroP'>Mentolado</Link>                       
                     </li>
                     <li>
-                        <p className='filtroP'>Especiales</p>                        
+                    <Link to='/filtros/tipoSabor/especiales' className='filtroP'>Especiales</Link>                       
                     </li>
                 </ul>
                 
                 <ul className="filtro">
                     <p className="tituloFiltro">MODELOS</p>
                     <li>
-                        <p className='filtroP'>Party</p>
+                    <Link to='/filtros/modelo/Party1800' className='filtroP'>Party</Link>   
                         <p className='filtroP'>Hungria</p>
                         <p className='filtroP'>Extra</p>
                     </li>
@@ -116,17 +114,25 @@ const Articulos = ()=> {
             <div className="filtroM">
                 <h3 className="h3FiltrosM">Sabores</h3>
                 <ul className="ulFiltrosM">
-                    <li className="filtroM">Fume</li>
-                    <li className="filtroM">Ignite</li>
-                    <li className="filtroM">Zomo</li>
+                <li className="filtroM"> <Link to='/filtros/tipoSabor/frutal' className='filtroM' style={{textDecoration: 'none'}}>Frutal</Link> </li>
+                    <li className="filtroM"> <Link to='/filtros/tipoSabor/especiales' className='filtroM' style={{textDecoration: 'none'}}>Especiales</Link> </li>
+                    <li className="filtroM"> <Link to='/filtros/tipoSabor/tabaco' className='filtroM' style={{textDecoration: 'none'}}>Tabaco</Link> </li>
+                    <li className="filtroM"> <Link to='/filtros/tipoSabor/mentolado' className='filtroM' style={{textDecoration: 'none'}}>Mentolado</Link> </li>
                 </ul>
             </div>
             <div className="filtroM">
                 <h3 className="h3FiltrosM">Pitadas</h3>
                 <ul className="ulFiltrosM">
-                    <li className="filtroM">Fume</li>
-                    <li className="filtroM">Ignite</li>
-                    <li className="filtroM">Zomo</li>
+                
+                   <li>
+                        <Link to='/filtros/puffs/1800' className='filtroM' style={{textDecoration: 'none'}}>1800</Link>
+                    </li>
+                    <li>
+                    <Link to='/filtros/puffs/2000' className='filtroM' style={{textDecoration: 'none'}}>2000</Link>                    
+                    </li>
+                    <li>
+                    <Link to='/filtros/puffs/5000' className='filtroM' style={{textDecoration: 'none'}}>5000</Link>                        
+                    </li>
                 </ul>
             </div>
            
@@ -137,7 +143,7 @@ const Articulos = ()=> {
         {data && data.map(item=> <MobileProducto titulo={item.titulo} precio={item.precio} img={item.img} categorias={item.categorias} stock={item.stock} desc={item.desc} key={item._id} id={item._id}/>)}
         
         </div>
-        <FooterM></FooterM>
+    <FooterM></FooterM>
         </div>
         </div>
     )

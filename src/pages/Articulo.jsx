@@ -70,6 +70,7 @@ const Articulo = () => {
               tipo={data.tipoSabor}
               nicotina={data.nicotina}
               hasOrdered={hasOrdered}
+              stock={data.stock}
             ></ArticuloC>
           </div>
         )}
@@ -155,7 +156,7 @@ const Articulo = () => {
             nicotina={data.nicotina}
             hasOrdered={hasOrdered}
           />
-          <FooterM />
+       
         </div>
       )}
 
@@ -178,7 +179,7 @@ const Articulo = () => {
             logo='logohungria.png'
             hasOrdered={hasOrdered}
           />
-          <FooterM />
+          
         </div>
       )}
 
@@ -202,7 +203,7 @@ const Articulo = () => {
             logo='logoparty.png'
             hasOrdered={hasOrdered}
           />
-          <FooterM />
+          
         </div>
       )}
     </div>

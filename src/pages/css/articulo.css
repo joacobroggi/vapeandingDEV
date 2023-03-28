@@ -311,33 +311,42 @@
         display: none;
     }
     .articuloMobile {
-        display: block;
+        display: flex;
+        flex-direction: column;
         background-image: url('../../img/fondoAzul.jpg');
         background-position: center;
-        height: 100%;
+        min-height: calc(var(--vh, 1vh) * 100);
         
+    }
+    .articuloM {
+        height: 100%;
+        margin: 0 0;
+        display: flex;
+        flex-direction: column;
     }
     .articuloMobileHungria {
         display: block;
         background-color: black;
         background-position: center;
-        height: 100%;
+        min-height: calc(var(--vh, 1vh) * 100);
     }
     .articuloMobileParty {
         display: block;
         background-color: black;
         background-position: center;
-        height: 100%;
+        min-height: calc(var(--vh, 1vh) * 100);
     }
     .imgArticuloM2 {
         width: 100%;
-        padding-top: 10%;
+        padding-top: 20%;
     }
     .articuloBottomM {
         background: linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%), rgba(255, 255, 255, 0.3);
         border-top-left-radius: 35px;
         border-top-right-radius: 35px;
         border-top: 2px solid white;
+        margin-bottom: 0;
+        margin-top: auto;
         padding: 5%;
         display: flex;
         flex-direction: column;

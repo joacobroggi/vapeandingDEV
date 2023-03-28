@@ -52,12 +52,14 @@ const ArticuloC = (props)=> {
    
 
     const handleClick = ()=>{
+
+
+      
       producto.claveUnica = getRandomInt(10000000);
-
-
       dispatch(
         addProducto({...producto, cantidad})
       )
+
     };
     
     return (

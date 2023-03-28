@@ -9,8 +9,6 @@ import { faCaretDown, faChevronLeft } from "@fortawesome/free-solid-svg-icons";
 import { addOrden } from "../redux/ordenReducer";
 
 
-
-/* HACERLO CON REDUX RESUELVE LOS PROBLEMAS */
 const Comprar = () => {
   const dispatch = useDispatch();
   const envio = useSelector((state) => state.cart.envio);
@@ -30,14 +28,43 @@ const sendData = ()=> {
 
 const continuar = (e)=> {
   e.preventDefault();
-  console.warn(orden);
-  dispatch(
-    addOrden(orden)
-  )
-  navigate('pago')
+  if (validarDireccion(direccion) && validarTelefono(telefono)) {
+    dispatch(
+      addOrden(orden)
+    )
+    navigate('pago')
+  }
+}
+
+function validarDireccion(direccion) {
+  if (direccion === "") {
+    alert("Introduzca una direccion");
+    return false;
+  } else if (direccion.length > 15) {
+    alert("Introduzca una direccion válida");
+    return false;
+  } else if (direccion.length < 3) {
+    alert("Introduzca una direccion válida");
+    return false;
+  } else {
+    return true;
+  } 
+}
+function validarTelefono(telefono) {
+  if (telefono === 0) {
+    alert('Introduzca un numero de telefono');
+    return false;
+  } else {
+    return true;
+  }
 }
 
   useEffect(() => {
+    if (carrito.productos.length === 0) {
+      navigate('/carrito')
+    } else if (carrito.productos.length > 10) {
+      navigate('/carrito')
+    } else
       setOrden({
         total: carrito.total + envio,
         productos: carrito.productos,
@@ -58,18 +85,7 @@ const continuar = (e)=> {
     <div className="enviosMain">
       {hasOrdered && <Navigate to='/pedidos'/>}
       <div className="breadCrumb">
-      <Link to="/" className="linkBreadcrumb">
-          Home
-        </Link>
-        <span className="separadorBreadCrumb">
-          <FontAwesomeIcon icon={faChevronLeft}></FontAwesomeIcon>
-        </span>
-        <Link to="/comprar" className="linkBreadcrumb">
-          Comprar
-        </Link>
-        <span className="separadorBreadCrumb">
-          <FontAwesomeIcon icon={faChevronLeft}></FontAwesomeIcon>
-        </span>
+      
         <Link to="/carrito" className="linkBreadcrumb">
           Carrito
         </Link>
@@ -231,7 +247,10 @@ const continuar = (e)=> {
           onChange={(e) => setTelefono(e.target.value)}
           className='inputIniciar'
         />
-<div className="botoneraEnvios">
+
+        
+      </div>
+      <div className="botoneraEnvios">
             <Link to="/carrito" className="volverEnvios">
               <FontAwesomeIcon
                 icon={faChevronLeft}
@@ -244,11 +263,8 @@ const continuar = (e)=> {
               Continuar
             </Link>
           </div>
-        
       </div>
-      </div>
-      <Footer></Footer>
-      <FooterM></FooterM>
+  
     </div>
   );
 };

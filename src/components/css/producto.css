@@ -59,6 +59,9 @@
     color: white;
     font-weight: 400;
     font-size: 1.5rem;
+    width: 90%;
+    text-align: center;
+    margin: 0 auto;
 }
 .precioArticuloM {
     font-family: var(--nerko);
@@ -70,4 +73,20 @@
 .productoM:hover {
     opacity: 85%;
     cursor: pointer;
+}
+
+@media (max-width: 1200px) {
+    .producto {
+        width: 20vw;
+    }
+}
+@media (max-width: 1000px) {
+    .producto {
+        width: 25vw;
+    }
+}
+@media (max-width: 800px) {
+    .producto {
+        width: 30vw;
+    }
 }

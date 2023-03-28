@@ -33,7 +33,6 @@ const Pedidos = () => {
       .then((res) => {
         setData(res.data);
         if (data.length === 0) {
-          console.log("china is the devil");
           dispatch(
             addOrden({
               total: '',
@@ -49,7 +48,6 @@ const Pedidos = () => {
             })
           );
         } else if (data === null) {
-          console.log("china is the devil");
           dispatch(
             addOrden({
               total: '',
@@ -69,7 +67,7 @@ const Pedidos = () => {
             hasOrdered: true,
           }))
         }
-        console.log(data);
+        
       })
       
   }, [data]);
@@ -90,7 +88,7 @@ const Pedidos = () => {
               <hr className="hrEnvios2"/>
               <p className="pOrden">
                 Ya estas cada vez más cerca de tu vaper {usuario.nombre}. Te
-                mandamos el recibo por email a {usuario.email}
+                mandamos información importante de tu orden por email a {usuario.email}
               </p>
             </div> : <div>
             <div className="cartelOrden">
@@ -203,6 +201,7 @@ const Pedidos = () => {
            <FooterM></FooterM>
         </div>
       )}
+      
     </div>
   );
 };

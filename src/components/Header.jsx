@@ -13,7 +13,7 @@ const Header = (props) => {
             <Link to="/" style={{textDecoration: 'none'}} className='h3Header'><FontAwesomeIcon icon={faCloud} /> VAPEARG</Link>
           
             <h4 className='h4Header comprar'><Link to='/comprar' style={{textDecoration: 'none', color: 'white'}}>COMPRAR</Link></h4>
-            <h4 className='h4Header sobreEscabianding'><Link to='/about' style={{textDecoration: 'none', color: 'white'}}>SOBRE VAPEANDING</Link></h4>
+            <h4 className='h4Header sobreEscabianding'><Link to='/about' style={{textDecoration: 'none', color: 'white'}}>SOBRE VAPEARG</Link></h4>
             {props.noPedidos? '' : <h4 className='h4Header sobreEscabianding'><Link to='/pedidos' style={{textDecoration: 'none', color: 'white'}}>PEDIDOS</Link></h4>}
             {props.carrito && <div className="carritoDiv">
             <Link to={props.hasOrdered ? "/pedidos" : "/carrito"}>
@@ -30,6 +30,7 @@ const Header = (props) => {
             INICIAR SESIÓN
             </Link>
             </div>}
+          
         </div>
     )
 }

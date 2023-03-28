@@ -83,6 +83,7 @@ const ArticulosFiltradosPuffs = ()=> {
 
 
        <div className="productosM">
+        
     {data && data.map(item=> <MobileProducto titulo={item.titulo} precio={item.precio} img={item.img} categorias={item.categorias} stock={item.enStock} desc={item.desc} key={item._id} id={item._id}/>)}
     </div>
     

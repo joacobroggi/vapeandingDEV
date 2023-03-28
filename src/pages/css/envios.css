@@ -223,6 +223,16 @@ input:focus-within {
   border-left: 1.5px solid rgba(255, 255, 255, 0.5);
   border-right: 1px solid rgba(255, 255, 255, 0.5);
 }
+.envioInfoCont2 {
+  width: 40%;
+  margin-top: 5%;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 2%;
+  border-radius: 10px;
+  border-top: 1.5px solid rgba(255, 255, 255, 0.9);
+  border-left: 1.5px solid rgba(255, 255, 255, 0.5);
+  border-right: 1px solid rgba(255, 255, 255, 0.5);
+}
 .envioInfo {
   display: flex;
   justify-content: space-between;
@@ -262,6 +272,7 @@ input:focus-within {
   display: flex;
   align-items: center;
 }
+
 .opcionPagoButtonActive {
   padding: 1%;
   border-radius: 50%;
@@ -287,6 +298,18 @@ input:focus-within {
   margin-left: 2%;
   background: rgba(255, 255, 255, 0.15);
   border: 6px solid white;
+}
+.opcionPagoButtonP {
+  padding: 1.7%;
+  border-radius: 50%;
+  margin-right: 2%;
+  margin-left: 2%;
+  background: rgba(255, 255, 255, 0.15);
+  border: 2px solid white;
+  transition: 0.2s;
+}
+.opcionPagoButtonP:hover {
+ cursor: not-allowed;
 }
 .h3Pagos {
   padding: 1%;
@@ -339,13 +362,13 @@ input:focus-within {
 }
 .cartelOrden {
   width: 75%;
-  background: rgba(255, 255, 255, 0.2);
+  
 margin-bottom: 10%;
   border-radius: 20px;
   padding: 5% 5%;
   margin-left: 4%;
 text-align: center;
-
+background: rgba(255, 255, 255, 0.2);
   border-top: 1px solid rgba(255, 255, 255, 0.9);
   border-left: 1px solid rgba(255, 255, 255, 0.5);
   border-right: 0px solid rgba(255, 255, 255, 0.5);
@@ -387,14 +410,76 @@ text-align: center;
     margin-top: 1%;
     margin-bottom: 3%;
 }
-.headerM {
-  display: none;
+
+.transferencia {
+  background-image: url('../../img/fondoAzul.jpg');
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+ 
+ 
+}
+.transferenciaC {
+  padding-top: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.h3Transfe {
+  color: white;
+  font-size: 2rem;
+  text-align: center;
+  font-family: var(--nerko);
+  font-weight: 400;
+}
+.h4Transf {
+  color: white;
+  font-size: 1.3rem;
+  text-align: center;
+  font-family: var(--nerko);
+  font-weight: 400;
+  margin-top: 1.8%;
+  width: 40%;
+}
+.btnTrans {
+  background: rgba(255, 255, 255, 0.2);
+  border-top: 1px solid rgba(255, 255, 255, 0.9);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  border-right: 0px solid rgba(255, 255, 255, 0.5);
+  color: white;
+  padding: 1.2%;
+  margin-top: 1%;
+  border-radius: 20px;
+  font-family: var(--nerko);
+  font-weight: 400;
+  text-decoration: none;
+  font-size: 1.3rem;
+  transition: 0.3s;
+}
+.btnTrans:hover {
+  background: rgba(255, 255, 255, 0.4);
 }
 
-@media (min-width: 330px) and (max-width: 576px) {
+@media (min-width: 576px) {
+  .headerM {
+      display: none;
+  }
+}
+
+@media (min-width: 200px) and (max-width: 576px) {
   .enviosContM {
     display: block;
   } 
+  .cartelOrden {
+    margin-left: 2%;
+    margin-right: 2%;
+    width: 85%;
+  }
+  .headerDiv {
+    display: none;
+  }
   .headerM {
     display:block;
   }
@@ -403,8 +488,19 @@ text-align: center;
   }
   .enviosMain {
     height: 100%;
+    display: flex;
+    
+  }
+  .comprarM {
+    min-height: 100vh;
+flex-direction: column;
+    display: grid;
+justify-content: center;
+   align-items: center;
+    flex-wrap: wrap;
   }
   .comprarForm2 {
+   
     
     width: 80%;
     margin: 0 auto;
@@ -415,6 +511,8 @@ text-align: center;
     }
     .breadCrumb {
       margin-top: 4.5%;
+      align-self: flex-start;
+  
     }
     .linkBreadcrumb {
       font-size: 1.2rem;
@@ -431,7 +529,9 @@ text-align: center;
   font-size: 1.5rem;
 }
 .botoneraEnvios {
-  width: 107%;
+  width: 90%;
+align-self: flex-end;
+justify-self: center;
 }
 .volverEnvios {
   width: 100%;
@@ -446,6 +546,10 @@ text-align: center;
   width: 100%;
 }
 .envioInfoCont {
+  width: 96%;
+  margin-bottom: 2%;
+}
+.envioInfoCont2 {
   width: 96%;
   margin-bottom: 2%;
 }
@@ -484,6 +588,7 @@ text-align: center;
   font-family: var(--nerko);
   color: white;
 }
+
 .imgOrdenM {
   width: 35%;
 }
@@ -500,5 +605,44 @@ text-align: center;
   margin-top: 4%;
   margin-bottom: 4%;
 }
-
+.comprarForm2 {
+  /* display: grid; */
+  margin-top: 20%;
+    height: 100%;
+}
+.comprarForm3 {
+  display: grid;
+  width: 85%;
+ margin: 0 auto;
+ height: 95%;
+}
+.envioInfoCont {
+  align-self: flex-start;
+  margin-top: 10%;
+}
+.envioInfoCont2 {
+  align-self: flex-start;
+  margin-top: 20%;
+}
+.envioInfoCont2M {
+  width: 85%;
+  margin: 0 auto;
+  margin-top: 20%;
+}
+.h4Transf {
+  width: 90%;
+  margin-top: 10%;
+  margin-bottom: 2%;
+}
+.btnTrans {
+  padding: 3%;
+}
+.transferencia {
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+}
+.transferenciaC {
+  padding: 0 0;
+}
 }

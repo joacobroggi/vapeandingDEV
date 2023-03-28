@@ -109,7 +109,12 @@ margin-top: 5%;
   margin-top: 4%;
   font-family: var(--nerko);
   color: white;
+  transition: 0.2s;
   font-size: 1.5rem;
+}
+.enviarLogin:hover {
+  background: rgba(255, 255, 255, 0.45);
+  cursor: pointer;
 }
 .enviarLoginErr {
   background: rgba(255, 0, 0, 0.603);
@@ -125,6 +130,11 @@ margin-top: 5%;
   font-family: var(--nerko);
   color: white;
   font-size: 1.5rem;
+  transition: 0.2s;
+}
+.enviarLoginErr:hover {
+  background: rgba(255, 0, 0, 0.703);
+  cursor: pointer;
 }
 .h6Login {
   align-self: center;
@@ -257,13 +267,13 @@ margin-top: 5%;
   }
 
   input::placeholder {
-    color: gainsboro;
+    color: rgb(221, 221, 221);
    
   }
 
 
 
-  @media (min-width: 330px) and (max-width: 576px) { 
+  @media (min-width: 200px) and (max-width: 576px) { 
     .loginBody {
       background-image: url('../../img/fondoRegistro.png');
       background-size: cover;
@@ -272,6 +282,7 @@ margin-top: 5%;
     .registerCard {
       width: 90%;
       padding: 0%;
+      margin-top: 20%;
       justify-content: flex-start;
       min-height: calc(var(--vh, 1vh) * 65);
     }

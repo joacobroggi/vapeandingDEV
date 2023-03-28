@@ -49,7 +49,7 @@ const ArticulosFiltradosPuffs = ()=> {
     <div className="articulosMobile">
        <HeaderM carrito={true}></HeaderM>
       
-    <h3 className="artTitleM">PARA TODOS LOS GUSTOS TENEMOS UNA PITADA</h3>
+    <h3 className="artTitleM">VAPERS CON {puffs} PITADAS</h3>
 
 
 

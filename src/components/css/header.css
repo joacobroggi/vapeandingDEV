@@ -197,7 +197,9 @@ opacity: 0;
         background-color: transparent;
       }
       100% {
-        background-color: black;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%), rgba(255, 255, 255, 0.3);
+        backdrop-filter: blur(9px);
+          -webkit-backdrop-filter: blur(9px);
       }
   }
   @keyframes fade-in {
@@ -207,13 +209,17 @@ opacity: 0;
     }
     100% {
       
-      background-color: black;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%), rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(9px);
+          -webkit-backdrop-filter: blur(9px);
     }
   }
 
   @-webkit-keyframes fade-out {
     0% {
-        background-color: black;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%), rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(9px);
+        -webkit-backdrop-filter: blur(9px);
         
       }
       100% {
@@ -223,7 +229,9 @@ opacity: 0;
   }
   @keyframes fade-out {
     0% {
-      background-color: black;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%), rgba(255, 255, 255, 0.3);
+      backdrop-filter: blur(9px);
+        -webkit-backdrop-filter: blur(9px);
       
     }
     100% {
