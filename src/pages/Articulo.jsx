@@ -14,6 +14,7 @@ import { useState, useEffect } from "react";
 import { publicRequest } from "../requestMethods";
 import HeaderM from "../components/HeaderM";
 import ArticuloUniqueMobile from "../components/ArticuloUniqueMobile";
+import Spinner from "../components/Spinner";
 
 const Articulo = () => {
   let id = useParams();
@@ -45,6 +46,11 @@ const Articulo = () => {
     <div>
       <div className="articuloDesk">
         <Header carrito={true} hasOrdered={hasOrdered}></Header>
+        {!data && (
+          <div className="wholePage">
+            <Spinner></Spinner>
+          </div>
+        )}
 
         {data && generico && (
           <div className="articuloBody">
@@ -139,6 +145,12 @@ const Articulo = () => {
       </div>
 
       <HeaderM carrito={true}></HeaderM>
+
+      {!data && (
+          <div className="wholePage">
+            <Spinner></Spinner>
+          </div>
+        )}
       {data && generico && (
         <div className="articuloMobile">
           <ArticuloM

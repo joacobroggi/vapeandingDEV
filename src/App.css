@@ -36,3 +36,12 @@ input::-webkit-inner-spin-button {
 body {
     margin: 0 0;  
 }
+.wholePage {
+  background-image: url('./img/fondoAzul.jpg');
+  background-position: center;
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

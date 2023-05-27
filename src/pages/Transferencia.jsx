@@ -61,7 +61,7 @@ const Transferencia = () => {
             <h3 className="h3ContactoInfo">
               <span style={{ textTransform: "uppercase" }}>ALIAS: </span>
             </h3>
-            <span className="linkContactoEnvio">Sexoooo123</span>
+            <span className="linkContactoEnvio">EJEMPLO1234</span>
           </div>
           <hr className="hr" />
           <div className="envioInfo">

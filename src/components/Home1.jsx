@@ -1,9 +1,13 @@
+import { useState } from "react";
 import Header from "../components/Header";
 import { Link } from 'react-router-dom';
 
 const Home1 = ()=> {
-   
+
+  
     return (
+        <div>
+            
         <div className='homeBody'>
            <Header carrito={true}></Header>
             <div className="baner1">
@@ -18,6 +22,7 @@ const Home1 = ()=> {
            
            
        
+        </div>
         </div>
     )
 }

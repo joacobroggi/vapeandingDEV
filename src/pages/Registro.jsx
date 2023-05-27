@@ -63,7 +63,11 @@ const Registro = () => {
     } else if (contraseña.length < 6) {
       alert("La contraseña debe tener mas de 6 caracteres");
       return false;
-    } else {
+    }else  if (!contraseña) {
+      alert("Introduzca una contraseña");
+      return false;
+    }
+     else {
       return true;
     }
   }
@@ -105,7 +109,6 @@ function validarTodo(email, clave, edad, usuario, nombre, apellido) {
     };
 
     if (validarTodo(email, clave, edad, usuario, nombre, apellido)) {
-      
       axios
         .post("https://vapearg.onrender.com/api/auth/registro", objeto)
         .then((res) => {
@@ -113,7 +116,7 @@ function validarTodo(email, clave, edad, usuario, nombre, apellido) {
           setCreado(true);
         });
     } else {
-      alert("Algo salio mal");
+      console.error("Algo salio mal");
     }
 
     // objeto = JSON.stringify(objeto);
@@ -153,7 +156,7 @@ function validarTodo(email, clave, edad, usuario, nombre, apellido) {
 
             <input
               type="email"
-              placeholder="joaquinmbroggi@gmail.com"
+              placeholder="pedrogonzalez@gmail.com"
               onChange={(e) => setemail(e.target.value)}
               className="nombreRegistro2"
             />
@@ -172,7 +175,7 @@ function validarTodo(email, clave, edad, usuario, nombre, apellido) {
 
                 <input
                   type="password"
-                  placeholder="messi10"
+                  placeholder="vapers120"
                   onChange={(e) => setclave(e.target.value)}
                   className="inputPasswordRegistro"
                 />

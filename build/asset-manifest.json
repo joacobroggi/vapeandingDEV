@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.901f4b22.css",
-    "main.js": "/static/js/main.2fc715bf.js",
+    "main.css": "/static/css/main.23b83f98.css",
+    "main.js": "/static/js/main.0dec5d51.js",
     "static/media/404.jpg": "/static/media/404.3f6ce1f76c640eb9696b.jpg",
     "static/media/fondoVioleta.jpg": "/static/media/fondoVioleta.aaa62b1e0b5f6a282fad.jpg",
     "static/media/aboutUs.jpg": "/static/media/aboutUs.5a41a8ce95841a5153e8.jpg",
@@ -35,6 +35,7 @@
     "static/media/mapaRos.png": "/static/media/mapaRos.acd7081bb97267c2eb84.png",
     "static/media/zomoBanner.png": "/static/media/zomoBanner.d86eb4e3e0aa54df0684.png",
     "static/media/STRAWBERRY-ICE.png": "/static/media/STRAWBERRY-ICE.5a2cb9ddabb402de618e.png",
+    "static/media/spain.svg": "/static/media/spain.e71eb618ce7721506fba.svg",
     "static/media/logoparty.png": "/static/media/logoparty.087355a88da26b69e698.png",
     "static/media/ignite1.webp": "/static/media/ignite1.d9275003e013774d55f0.webp",
     "static/media/sexo.png": "/static/media/sexo.8c4bef999772d526addd.png",
@@ -56,11 +57,11 @@
     "static/media/fumeCuban.webp": "/static/media/fumeCuban.002e37836b5b57fc38b2.webp",
     "index.html": "/index.html",
     "static/media/site.webmanifest": "/static/media/site.1c337fa2fa1515591f8d.webmanifest",
-    "main.901f4b22.css.map": "/static/css/main.901f4b22.css.map",
-    "main.2fc715bf.js.map": "/static/js/main.2fc715bf.js.map"
+    "main.23b83f98.css.map": "/static/css/main.23b83f98.css.map",
+    "main.0dec5d51.js.map": "/static/js/main.0dec5d51.js.map"
   },
   "entrypoints": [
-    "static/css/main.901f4b22.css",
-    "static/js/main.2fc715bf.js"
+    "static/css/main.23b83f98.css",
+    "static/js/main.0dec5d51.js"
   ]
 }

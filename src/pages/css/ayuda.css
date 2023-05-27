@@ -30,7 +30,7 @@
 .dropdwonAyuda {
     margin-bottom: 2%;
     width: 40vw;
-    height: 6vh;
+    min-height: 6vh;
     background-color: antiquewhite;
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%), rgba(255, 255, 255, 0.3);
     border-top: 1.5px solid rgba(255, 255, 255, 0.9);

@@ -104,7 +104,7 @@ const ArticuloC = (props)=> {
           <div className="derecha">
             
             
-           {props.hasOrdered ?  <Link to='/carrito' className="h2Precio" >NO PODES - <b className="valor">${props.precio}</b></Link> :  <Link to='/carrito' className="h2Precio" onClick={handleClick}>AGREGAR AL CARRITO - <b className="valor">${props.precio}</b></Link>}
+           {props.hasOrdered ?  <Link to='/carrito' className="h2Precio" >YA REALIZASTE UNA ORDEN - <b className="valor">${props.precio}</b></Link> :  <Link to='/carrito' className="h2Precio" onClick={handleClick}>AGREGAR AL CARRITO - <b className="valor">${props.precio}</b></Link>}
           </div>
         </div>
     )

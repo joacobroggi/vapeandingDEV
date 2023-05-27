@@ -35,7 +35,7 @@ const Login = () => {
         
           <input
             type="email"
-            placeholder="joaquinmbroggi@gmail.com"
+            placeholder="pedrogonzalez@gmail.com"
             onChange={(e) => setEmail(e.target.value)}
 
             className='inputIniciar'
@@ -45,7 +45,7 @@ const Login = () => {
             
           <input
             type="password"
-            placeholder="messi10"
+            placeholder="vapers120"
             onChange={(e) => setClave(e.target.value)}
             className='inputIniciar'
           />

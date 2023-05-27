@@ -40,36 +40,36 @@ const [a6, seta6] = useState(false)
 
           <div className={a2 ? 'dropdwonAyudaA' : "dropdwonAyuda"}>
           <div className="ayudaTitle">
-          <h4 className="h4Ayuda">¿Que es Vapearg?</h4>
+          <h4 className="h4Ayuda">¿Vapearg sigue vendiendo productos a pesar de la prohibición del cigarrillo electrónico en Argentina?</h4>
           <FontAwesomeIcon icon={a2 ? faCaretUp : faCaretDown} className='iconAyuda' onClick={()=> seta2((current) => !current)}></FontAwesomeIcon>
           </div>
               <div className={a2 ? "tracking-in-expand ayudaDesplegado" : 'hide'}>
               
-              <p className="pAyuda">Vapearg es la tienda online de vapers por excelencia en Rosario. Ofrecemos productos de alta calidad a precios accesibles y envío inmediato.</p>
+              <p className="pAyuda">No, Vapearg no esta operativo actualmente y funciona solo a modo de ejemplo.</p>
               
               </div>
           </div>
          
           <div className={a3 ? 'dropdwonAyudaA' : "dropdwonAyuda"}>
           <div className="ayudaTitle">
-          <h4 className="h4Ayuda">¿Que es Vapearg?</h4>
+          <h4 className="h4Ayuda">¿Se aceptaban diferentes métodos de pago en Vapearg?</h4>
           <FontAwesomeIcon icon={a3 ? faCaretUp : faCaretDown} className='iconAyuda' onClick={()=> seta3((current) => !current)}></FontAwesomeIcon>
           </div>
               <div className={a3 ? "tracking-in-expand ayudaDesplegado" : 'hide'}>
               
-              <p className="pAyuda">Vapearg es la tienda online de vapers por excelencia en Rosario. Ofrecemos productos de alta calidad a precios accesibles y envío inmediato.</p>
+              <p className="pAyuda">Vapearg iba a aceptar transacciones por medio de tarjeta de débito.</p>
               
               </div>
           </div>
           
           <div className={a4 ? 'dropdwonAyudaA' : "dropdwonAyuda"}>
           <div className="ayudaTitle">
-          <h4 className="h4Ayuda">¿Que es Vapearg?</h4>
+          <h4 className="h4Ayuda">¿Vapearg brindaba asesoramiento o soporte técnico sobre los vapers?</h4>
           <FontAwesomeIcon icon={a4 ? faCaretUp : faCaretDown} className='iconAyuda' onClick={()=> seta4((current) => !current)}></FontAwesomeIcon>
           </div>
               <div className={a4 ? "tracking-in-expand ayudaDesplegado" : 'hide'}>
               
-              <p className="pAyuda">Vapearg es la tienda online de vapers por excelencia en Rosario. Ofrecemos productos de alta calidad a precios accesibles y envío inmediato.</p>
+              <p className="pAyuda">Sí, cualquier duda sobre nuestros productos iba a ser resuelta por el soporte tecnico de Vapearg.</p>
               
               </div>
           </div>

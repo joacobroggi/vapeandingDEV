@@ -33,10 +33,30 @@ const Home = () => {
     setSwipe3(true)
   }
 
+  const [alerta, setalerta] = useState(true)
+   
+
+  const handleAlerta = ()=> {
+      setalerta(!alerta)
+  }
+
   return (
     <div>
-      <div className="homeDesk">
-        <Home1></Home1>
+
+{alerta && <div className='homeAlerta'>
+          
+            
+               <h2 className="h2Alerta">ATENCIÓN</h2>
+               <p className="alertaP">ESTA PÁGINA NO ES FUNCIONAL, FUNCIONA SOLO A MODO DE EJEMPLO. NINGUN PRODUCTO DE LOS VISUALIZADOS ESTA A LA VENTA</p>
+               <button onClick={handleAlerta} className="banner1P alertaBtn">LO ENTIENDO</button>
+          
+           
+           
+       
+        </div>}
+
+      {!alerta && <div className="homeDesk">
+        {!alerta && <Home1></Home1>}
         <Home2></Home2>
         <div className="home3">
           <FontAwesomeIcon icon={faCloud} className='iconHome3'></FontAwesomeIcon>
@@ -49,11 +69,9 @@ const Home = () => {
           <Link to='/ayuda' className='home3LinkBtn'>Conocé vapearg</Link>
         </div>
         <Footer></Footer>
-      </div>
+      </div>}
 
-
-
-      <div className="homeMobile">
+      {!alerta && <div className="homeMobile">
         <div className="home1M">
           <div className="filtroHM">
             <HeaderM carrito={true}></HeaderM>
@@ -98,7 +116,7 @@ const Home = () => {
         </div>
 
         <FooterM></FooterM>
-      </div>
+      </div>}
   
     </div>
   );

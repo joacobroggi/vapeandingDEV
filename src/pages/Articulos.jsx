@@ -5,6 +5,7 @@ import Header from '../components/Header';
 import HeaderM from '../components/HeaderM';
 import Footer from "../components/Footer";
 import FooterM from "../components/FooterM";
+import Spinner from "../components/Spinner";
 import './css/articulos.css'
 import MobileProducto from '../components/MobileProducto';
 import { Link } from "react-router-dom";
@@ -25,6 +26,15 @@ const Articulos = ()=> {
         <div className="articulosMain">
             <div className="articulosDesk">
            <Header carrito={true}></Header>
+
+            {!data && (
+                <div className="wholePage">
+                    <Spinner></Spinner>
+                </div>
+            )}
+        
+
+            {data && <div>
             <div className="cartelArticulos">
                 <h2 className="h2Articulos">PARA TODOS LOS GUSTOS TENEMOS UNA PITADA.</h2>
             </div>
@@ -92,57 +102,69 @@ const Articulos = ()=> {
         </div>
 <br />
 <br />
+            </div>}
         <Footer></Footer>
         </div>
 
         <div className="articulosMobile">
            <HeaderM carrito={true}></HeaderM>
           
-        <h3 className="artTitleM">PARA TODOS LOS GUSTOS TENEMOS UNA PITADA</h3>
+           {!data && (
+          <div className="wholePage">
+            <Spinner></Spinner>
+          </div>
+        )}
+
+            {data && (
+                <div>
+                    <h3 className="artTitleM">PARA TODOS LOS GUSTOS TENEMOS UNA PITADA</h3>
 
 
 
-        <div className="filtrosM">
-            <div className="filtroM">
-                <h3 className="h3FiltrosM">Marcas</h3>
-                <ul className="ulFiltrosM">
-                    <li className="filtroM">Fume</li>
-                    <li className="filtroM">Ignite</li>
-                    <li className="filtroM">Zomo</li>
-                </ul>
-            </div>
-            <div className="filtroM">
-                <h3 className="h3FiltrosM">Sabores</h3>
-                <ul className="ulFiltrosM">
-                <li className="filtroM"> <Link to='/filtros/tipoSabor/frutal' className='filtroM' style={{textDecoration: 'none'}}>Frutal</Link> </li>
-                    <li className="filtroM"> <Link to='/filtros/tipoSabor/especiales' className='filtroM' style={{textDecoration: 'none'}}>Especiales</Link> </li>
-                    <li className="filtroM"> <Link to='/filtros/tipoSabor/tabaco' className='filtroM' style={{textDecoration: 'none'}}>Tabaco</Link> </li>
-                    <li className="filtroM"> <Link to='/filtros/tipoSabor/mentolado' className='filtroM' style={{textDecoration: 'none'}}>Mentolado</Link> </li>
-                </ul>
-            </div>
-            <div className="filtroM">
-                <h3 className="h3FiltrosM">Pitadas</h3>
-                <ul className="ulFiltrosM">
-                
-                   <li>
-                        <Link to='/filtros/puffs/1800' className='filtroM' style={{textDecoration: 'none'}}>1800</Link>
-                    </li>
-                    <li>
-                    <Link to='/filtros/puffs/2000' className='filtroM' style={{textDecoration: 'none'}}>2000</Link>                    
-                    </li>
-                    <li>
-                    <Link to='/filtros/puffs/5000' className='filtroM' style={{textDecoration: 'none'}}>5000</Link>                        
-                    </li>
-                </ul>
-            </div>
-           
-        </div>
-
-
-           <div className="productosM">
-        {data && data.map(item=> <MobileProducto titulo={item.titulo} precio={item.precio} img={item.img} categorias={item.categorias} stock={item.stock} desc={item.desc} key={item._id} id={item._id}/>)}
+<div className="filtrosM">
+    <div className="filtroM">
+        <h3 className="h3FiltrosM">Marcas</h3>
+        <ul className="ulFiltrosM">
+            <li className="filtroM">Fume</li>
+            <li className="filtroM">Ignite</li>
+            <li className="filtroM">Zomo</li>
+        </ul>
+    </div>
+    <div className="filtroM">
+        <h3 className="h3FiltrosM">Sabores</h3>
+        <ul className="ulFiltrosM">
+        <li className="filtroM"> <Link to='/filtros/tipoSabor/frutal' className='filtroM' style={{textDecoration: 'none'}}>Frutal</Link> </li>
+            <li className="filtroM"> <Link to='/filtros/tipoSabor/especiales' className='filtroM' style={{textDecoration: 'none'}}>Especiales</Link> </li>
+            <li className="filtroM"> <Link to='/filtros/tipoSabor/tabaco' className='filtroM' style={{textDecoration: 'none'}}>Tabaco</Link> </li>
+            <li className="filtroM"> <Link to='/filtros/tipoSabor/mentolado' className='filtroM' style={{textDecoration: 'none'}}>Mentolado</Link> </li>
+        </ul>
+    </div>
+    <div className="filtroM">
+        <h3 className="h3FiltrosM">Pitadas</h3>
+        <ul className="ulFiltrosM">
         
-        </div>
+           <li>
+                <Link to='/filtros/puffs/1800' className='filtroM' style={{textDecoration: 'none'}}>1800</Link>
+            </li>
+            <li>
+            <Link to='/filtros/puffs/2000' className='filtroM' style={{textDecoration: 'none'}}>2000</Link>                    
+            </li>
+            <li>
+            <Link to='/filtros/puffs/5000' className='filtroM' style={{textDecoration: 'none'}}>5000</Link>                        
+            </li>
+        </ul>
+    </div>
+   
+</div>
+
+
+   <div className="productosM">
+{data && data.map(item=> <MobileProducto titulo={item.titulo} precio={item.precio} img={item.img} categorias={item.categorias} stock={item.stock} desc={item.desc} key={item._id} id={item._id}/>)}
+
+</div>
+                </div>
+            )}
+        
     <FooterM></FooterM>
         </div>
         </div>
