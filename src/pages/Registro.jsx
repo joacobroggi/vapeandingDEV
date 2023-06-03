@@ -136,7 +136,7 @@ function validarTodo(email, clave, edad, usuario, nombre, apellido) {
                 <input
                   type="text"
                   placeholder="nombre"
-                  onChange={(e) => setapellido(e.target.value)}
+                  onChange={(e) => setnombre(e.target.value)}
                   className="nombreRegistro2"
                 />
               </div>
@@ -146,7 +146,7 @@ function validarTodo(email, clave, edad, usuario, nombre, apellido) {
                 <input
                   type="text"
                   placeholder="nombre"
-                  onChange={(e) => setnombre(e.target.value)}
+                  onChange={(e) => setapellido(e.target.value)}
                   className="nombreRegistro2"
                 />
               </div>

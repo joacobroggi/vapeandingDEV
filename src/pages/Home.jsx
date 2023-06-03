@@ -47,7 +47,10 @@ const Home = () => {
           
             
                <h2 className="h2Alerta">ATENCIÓN</h2>
-               <p className="alertaP">ESTA PÁGINA NO ES FUNCIONAL, FUNCIONA SOLO A MODO DE EJEMPLO. NINGUN PRODUCTO DE LOS VISUALIZADOS ESTA A LA VENTA</p>
+               <p className="alertaP">Esta página no es real, funciona solo a modo de ejemplo. Ninguno de los productos visualizados esta a la venta
+               <br />
+               SI AL INICIO LA PÁGINA TARDA MUCHO EN CARGAR PORFAVOR TEN PACIENCIA. ESTA APP ESTA HOSTEADA EN RENDER PARA DISMINUIR COSTOS Y AL PRINCIPIO PUEDE TARDAR EN CARGAR.
+               </p>
                <button onClick={handleAlerta} className="banner1P alertaBtn">LO ENTIENDO</button>
           
            
